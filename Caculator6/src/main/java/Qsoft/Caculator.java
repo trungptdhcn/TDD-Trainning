@@ -19,19 +19,26 @@ public class Caculator {
        }
         else
        {
-           ArrayList<Integer> mNumbers = new ArrayList<Integer>();
-           for(String x: s.split(","))
-           {
-                mNumbers.add(Integer.parseInt(x));
-
-           }
-           for(Integer x: mNumbers)
-           {
-               sum = sum +x;
-           }
+           sum = Caculator.getSumNumber(s);
        }
         return sum;
 
+    }
+    public static int getSumNumber(String s)
+    {
+        int sum = 0;
+        ArrayList<Integer> mNumber = new ArrayList<Integer>();
+        for(String x: s.split("[, - \n]"))
+        {
+            mNumber.add(Integer.parseInt(x));
+        }
+        for(Integer x : mNumber)
+        {
+            if(x<0) throw new RuntimeException("negatives not allowed "+ x);
+            else if(x >=1000) x = 0;
+            sum = sum + x;
+        }
+        return sum;
     }
 
 }
