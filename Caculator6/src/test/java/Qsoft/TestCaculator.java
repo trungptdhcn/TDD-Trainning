@@ -19,4 +19,9 @@ public class TestCaculator extends TestCase {
         assertEquals(1,Caculator.add("1"));
         assertEquals(22,Caculator.add("22"));
     }
+    public void testStringHasTwoNumber()
+    {
+        assertEquals(3,Caculator.add("1,2"));
+        assertEquals(22,Caculator.add("1,21"));
+    }
 }
