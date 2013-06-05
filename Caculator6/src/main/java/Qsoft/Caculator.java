@@ -15,7 +15,12 @@ public class Caculator {
        {
             sum = 0;
        }
+        else
+       {
+           sum = Integer.parseInt(s);
+       }
         return sum;
+
     }
 
 }
