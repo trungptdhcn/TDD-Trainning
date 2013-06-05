@@ -45,10 +45,18 @@ public class Caculator {
         }
         for(Integer x : mNumber)
         {
-            a = a+" "+x;
-            if(x<0) throw new RuntimeException("negatives not allowed "+ a);
-            else if(x >=1000) x = 0;
-            sum = sum + x;
+           if(x < 0)
+           {
+               throw new RuntimeException("negatives not allowed"+ Caculator.ischeckNegative(mNumber));
+           }
+
+           else if(x>1000)
+           {
+               x =0;
+           }
+            else {
+               sum = sum +x;
+           }
         }
         return sum;
     }
@@ -70,6 +78,18 @@ public class Caculator {
             return Delimiter;
         }
         return "";
+    }
+    public static String ischeckNegative(ArrayList<Integer> numbers)
+    {
+        String a="";
+        for(Integer x: numbers)
+        {
+            if(x<0)
+            {
+                a = a+" "+x;
+            }
+        }
+        return a;
     }
 
 }

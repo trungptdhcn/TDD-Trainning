@@ -39,11 +39,11 @@ public class TestCaculator extends TestCase {
     public void testStringNegative()
     {
         try{
-            Caculator.add("1,2,-1,-2");
+            Caculator.add("1,-1,-2,3");
             fail("Exception expect");
         }catch (Exception e)
         {
-            assertEquals("negatives not allowed -1 -2 ",e.getMessage());
+            assertEquals("negatives not allowed -1 -2",e.getMessage());
         }
     }
 }
