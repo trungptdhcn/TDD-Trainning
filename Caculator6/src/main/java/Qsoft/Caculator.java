@@ -26,8 +26,17 @@ public class Caculator {
            }else {
                String Delimiter = Caculator.getDelimiter(s);
                String mNumbers = s.substring(s.lastIndexOf("\n")+1,s.length());
-               mNumbers = mNumbers.replace(Delimiter,",");
-               sum = Caculator.getSumNumber(mNumbers);
+               if(!Caculator.isDelimiterHasBrakets(Delimiter))
+               {
+                   mNumbers = mNumbers.replace(Delimiter,",");
+                   sum = Caculator.getSumNumber(mNumbers);
+               }else
+               {
+                   Delimiter = Delimiter.substring(Delimiter.indexOf("[")+1,Delimiter.lastIndexOf("]"));
+                   mNumbers = mNumbers.replace(Delimiter,",");
+                   sum = Caculator.getSumNumber(mNumbers);
+               }
+
            }
 
        }
@@ -72,6 +81,13 @@ public class Caculator {
             return Delimiter;
         }
         return "";
+    }
+    public static boolean isDelimiterHasBrakets(String Delimiter)
+    {
+        Pattern pattern = Pattern.compile("(\\[)(.*)(\\])");
+        if(pattern.matcher(Delimiter).find())
+            return true;
+        return false;
     }
     public static String ischeckNegative(ArrayList<Integer> numbers)
     {
