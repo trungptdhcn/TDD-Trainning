@@ -54,4 +54,8 @@ public class TestCaculator extends TestCase {
     {
         assertEquals(3,Caculator.add("//[**2*]\n1**2*2**2*3000"));
     }
+    public void testStringHasMultipleDelimiter()
+    {
+        assertEquals(6,Caculator.add("//[**][%%]\n1**2%%3"));
+    }
 }
