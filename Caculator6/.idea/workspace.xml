@@ -5,7 +5,7 @@
     <ignored path="Caculator6.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/TestCaculator.java" changelist="c000b2e2-3477-4137-a032-18a1c3cb7b6b" time="1370444516157" ignored="false" />
-    <file path="/Caculator.java" changelist="c000b2e2-3477-4137-a032-18a1c3cb7b6b" time="1370444596254" ignored="false" />
+    <file path="/Caculator.java" changelist="c000b2e2-3477-4137-a032-18a1c3cb7b6b" time="1370444753203" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,7 @@
       <file leaf-file-name="Caculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="19" selection-start="256" selection-end="256" vertical-scroll-proportion="0.55737704">
+            <state line="17" column="19" selection-start="343" selection-end="343" vertical-scroll-proportion="0.7896175">
               <folding />
             </state>
           </provider>
@@ -501,7 +501,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="19" selection-start="256" selection-end="256" vertical-scroll-proportion="0.55737704">
+        <state line="17" column="19" selection-start="343" selection-end="343" vertical-scroll-proportion="0.7896175">
           <folding />
         </state>
       </provider>
