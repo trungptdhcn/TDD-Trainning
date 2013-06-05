@@ -37,6 +37,7 @@ public class Caculator {
     public static int getSumNumber(String s)
     {
         int sum = 0;
+        String a = "";
         ArrayList<Integer> mNumber = new ArrayList<Integer>();
         for(String x: s.split("[, - \n]"))
         {
@@ -44,7 +45,8 @@ public class Caculator {
         }
         for(Integer x : mNumber)
         {
-            if(x<0) throw new RuntimeException("negatives not allowed "+ x);
+            a = a+" "+x;
+            if(x<0) throw new RuntimeException("negatives not allowed "+ a);
             else if(x >=1000) x = 0;
             sum = sum + x;
         }
