@@ -4,7 +4,7 @@
     <list default="true" id="c000b2e2-3477-4137-a032-18a1c3cb7b6b" name="Default" comment="" />
     <ignored path="Caculator6.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/TestCaculator.java" changelist="c000b2e2-3477-4137-a032-18a1c3cb7b6b" time="1370453146620" ignored="false" />
+    <file path="/TestCaculator.java" changelist="c000b2e2-3477-4137-a032-18a1c3cb7b6b" time="1370453652453" ignored="false" />
     <file path="/Caculator.java" changelist="c000b2e2-3477-4137-a032-18a1c3cb7b6b" time="1370453480425" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,19 +73,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCaculator.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TestCaculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
+            <state line="33" column="5" selection-start="846" selection-end="846" vertical-scroll-proportion="0.90710384">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Caculator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Caculator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="5" selection-start="454" selection-end="454" vertical-scroll-proportion="0.76775956">
+            <state line="24" column="77" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#577#586#0" expanded="true" />
               </folding>
@@ -104,8 +104,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java" />
       </list>
     </option>
   </component>
@@ -494,19 +494,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="5" selection-start="454" selection-end="454" vertical-scroll-proportion="0.76775956">
+        <state line="24" column="77" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#577#586#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="5" selection-start="846" selection-end="846" vertical-scroll-proportion="0.90710384">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -24,4 +24,12 @@ public class TestCaculator extends TestCase {
         assertEquals(3,Caculator.add("1,2"));
         assertEquals(22,Caculator.add("1,21"));
     }
+    public void testStringUnknowNumbers()
+    {
+        assertEquals(4,Caculator.add("1,1,1,1"));
+    }
+    public void testStringHasNewLinebetweenNumbers()
+    {
+        assertEquals(6,Caculator.add("1\n2,3"));
+    }
 }
