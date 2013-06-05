@@ -49,14 +49,8 @@ public class Caculator {
            {
                throw new RuntimeException("negatives not allowed"+ Caculator.ischeckNegative(mNumber));
            }
-
-           else if(x>1000)
-           {
-               x =0;
-           }
-            else {
-               sum = sum +x;
-           }
+           else if(x >=1000) x = 0;
+           sum = sum + x;
         }
         return sum;
     }
