@@ -27,4 +27,8 @@ public class TestCaculator extends TestCase {
     {
         assertEquals(4,Caculator.add("1,2,1"));
     }
+    public void testStringHasNewLinebetweenNumbers()
+    {
+        assertEquals(6,Caculator.add("1\n2,3"));
+    }
 }
