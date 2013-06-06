@@ -46,4 +46,8 @@ public class TestCaculator extends TestCase {
             assertEquals("negatives not allowed -1 -4",e.getMessage());
         }
     }
+    public void testStringHasBigNumbers()
+    {
+        assertEquals(2,Caculator.add("2,1000"));
+    }
 }
