@@ -31,4 +31,8 @@ public class TestCaculator extends TestCase {
     {
         assertEquals(6,Caculator.add("1\n2,3"));
     }
+    public void testStringHasDifferenceDelimiter()
+    {
+        assertEquals(6,Caculator.add("//8\n18283"));
+    }
 }
