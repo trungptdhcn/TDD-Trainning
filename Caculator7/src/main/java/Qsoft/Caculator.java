@@ -26,7 +26,7 @@ public class Caculator {
     {
         ArrayList<Integer> mNumber = new ArrayList<Integer>();
         int sum = 0;
-        for(String x : s.split(","))
+        for(String x : s.split("[, - \n]"))
         {
             mNumber.add(Integer.parseInt(x));
         }
