@@ -50,4 +50,8 @@ public class TestCaculator extends TestCase {
     {
         assertEquals(2,Caculator.add("2,1000"));
     }
+    public void testStringHasUnknownDelimiterLenght()
+    {
+        assertEquals(3,Caculator.add("//[**2*]\n1**2*2**2*3000"));
+    }
 }
