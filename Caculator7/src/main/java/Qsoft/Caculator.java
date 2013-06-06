@@ -1,5 +1,7 @@
 package Qsoft;
 
+import java.util.ArrayList;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Trung
@@ -15,7 +17,15 @@ public class Caculator {
         {
              sum = 0;
         }else{
-            sum = Integer.parseInt(s);
+            ArrayList<Integer> mNumbers = new ArrayList<Integer>();
+            for(String x:s.split(","))
+            {
+                mNumbers.add(Integer.parseInt(x));
+            }
+            for(Integer x: mNumbers)
+            {
+                sum = sum +x;
+            }
         }
         return sum;
     }
