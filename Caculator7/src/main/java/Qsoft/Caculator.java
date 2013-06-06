@@ -10,8 +10,11 @@ package Qsoft;
 public class Caculator {
     public static int add(String s)
     {
-        int sum = -1;
+        int sum = 0;
+        if(s.length() == 0)
+        {
+             sum = 0;
+        }
         return sum;
-
     }
 }
