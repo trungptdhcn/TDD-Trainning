@@ -35,4 +35,15 @@ public class TestCaculator extends TestCase {
     {
         assertEquals(6,Caculator.add("//8\n18283"));
     }
+    public void testStringNegative()
+    {
+        try
+        {
+            Caculator.add("1,2,-1,-4");
+            fail("Exception expect");
+        }catch (Exception e)
+        {
+            assertEquals("negatives not allowed -1 -2",e.getMessage());
+        }
+    }
 }

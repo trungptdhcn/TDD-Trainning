@@ -4,7 +4,7 @@
     <list default="true" id="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" name="Default" comment="" />
     <ignored path="Caculator7.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/TestCaculator.java" changelist="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" time="1370502087714" ignored="false" />
+    <file path="/TestCaculator.java" changelist="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" time="1370502683840" ignored="false" />
     <file path="/Caculator.java" changelist="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" time="1370502525150" ignored="false" />
     <file path="/fragment.java" changelist="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" time="1370501862729" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,7 +89,7 @@
       <file leaf-file-name="TestCaculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="101" selection-start="796" selection-end="796" vertical-scroll-proportion="0.72131145">
+            <state line="45" column="69" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.90710384">
               <folding />
             </state>
           </provider>
@@ -106,8 +106,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java" />
       </list>
     </option>
   </component>
@@ -394,7 +394,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -501,7 +501,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="101" selection-start="796" selection-end="796" vertical-scroll-proportion="0.72131145">
+        <state line="45" column="69" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.90710384">
           <folding />
         </state>
       </provider>
