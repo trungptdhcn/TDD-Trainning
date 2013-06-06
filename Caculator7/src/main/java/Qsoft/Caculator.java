@@ -17,15 +17,22 @@ public class Caculator {
         {
              sum = 0;
         }else{
-            ArrayList<Integer> mNumbers = new ArrayList<Integer>();
-            for(String x:s.split(","))
-            {
-                mNumbers.add(Integer.parseInt(x));
-            }
-            for(Integer x: mNumbers)
-            {
-                sum = sum +x;
-            }
+            sum = Caculator.getSumNumber(s);
+
+        }
+        return sum;
+    }
+    public static int getSumNumber(String s)
+    {
+        ArrayList<Integer> mNumber = new ArrayList<Integer>();
+        int sum = 0;
+        for(String x : s.split(","))
+        {
+            mNumber.add(Integer.parseInt(x));
+        }
+        for(Integer x: mNumber)
+        {
+            sum = sum +x ;
         }
         return sum;
     }
