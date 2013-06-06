@@ -1,6 +1,8 @@
 package Qsoft;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,7 +19,17 @@ public class Caculator {
         {
              sum = 0;
         }else{
-            sum = Caculator.getSumNumber(s);
+            if(!Caculator.isHasDelimiter(s))
+            {
+                sum = Caculator.getSumNumber(s);
+            }else
+            {
+                String Delimiter = Caculator.getDelimiter(s);
+                String mNumber = s.substring(s.lastIndexOf("\n")+1,s.length());
+                mNumber = mNumber.replace(Delimiter,",");
+                sum = Caculator.getSumNumber(mNumber);
+            }
+
 
         }
         return sum;
@@ -35,5 +47,24 @@ public class Caculator {
             sum = sum +x ;
         }
         return sum;
+    }
+    public static boolean isHasDelimiter(String s)
+    {
+        Pattern pattern = Pattern.compile("(//)(.*)(\n)(.*)");
+        if(pattern.matcher(s).find())
+            return true;
+        return false;
+    }
+    public static String getDelimiter(String s)
+    {
+        Pattern pattern = Pattern.compile("(//)(.*)(\n)");
+        Matcher matcher = pattern.matcher(s);
+        if(matcher.find())
+        {
+            String Delimiter = matcher.group(0);
+            Delimiter = Delimiter.substring(Delimiter.indexOf("//")+2,Delimiter.lastIndexOf("\n"));
+            return Delimiter;
+        }
+        return "";
     }
 }
