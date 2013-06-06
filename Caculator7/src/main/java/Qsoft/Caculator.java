@@ -14,6 +14,8 @@ public class Caculator {
         if(s.length() == 0)
         {
              sum = 0;
+        }else{
+            sum = Integer.parseInt(s);
         }
         return sum;
     }
