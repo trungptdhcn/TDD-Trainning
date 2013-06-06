@@ -43,7 +43,7 @@ public class TestCaculator extends TestCase {
             fail("Exception expect");
         }catch (Exception e)
         {
-            assertEquals("negatives not allowed -1 -2",e.getMessage());
+            assertEquals("negatives not allowed -1 -4",e.getMessage());
         }
     }
 }

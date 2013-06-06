@@ -44,6 +44,10 @@ public class Caculator {
         }
         for(Integer x: mNumber)
         {
+            if(x < 0)
+            {
+                throw new RuntimeException("negatives not allowed"+ Caculator.ischeckNegative(mNumber));
+            } else
             sum = sum +x ;
         }
         return sum;
@@ -66,5 +70,17 @@ public class Caculator {
             return Delimiter;
         }
         return "";
+    }
+    public static String ischeckNegative(ArrayList<Integer> numbers)
+    {
+        String a="";
+        for(Integer x: numbers)
+        {
+            if(x<0)
+            {
+                a = a+" "+x;
+            }
+        }
+        return a;
     }
 }
