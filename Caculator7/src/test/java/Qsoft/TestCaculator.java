@@ -23,4 +23,8 @@ public class TestCaculator extends TestCase {
     {
         assertEquals(3,Caculator.add("1,2"));
     }
+    public void testStringUnknownNumber()
+    {
+        assertEquals(4,Caculator.add("1,2,1"));
+    }
 }
