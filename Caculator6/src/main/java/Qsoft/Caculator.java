@@ -33,6 +33,12 @@ public class Caculator {
                }else
                {
                    Delimiter = Delimiter.substring(Delimiter.indexOf("[")+1,Delimiter.lastIndexOf("]"));
+                   ArrayList<String> mMultipleDelimiter = new ArrayList<String>();
+                   mMultipleDelimiter = Caculator.getMultipleDelimiter(Delimiter);
+                   for(String x:mMultipleDelimiter)
+                   {
+                       mNumbers = mNumbers.replaceAll(Pattern.quote(x),",");
+                   }
                    mNumbers = mNumbers.replace(Delimiter,",");
                    sum = Caculator.getSumNumber(mNumbers);
                }
@@ -100,6 +106,16 @@ public class Caculator {
             }
         }
         return a;
+    }
+    public static ArrayList<String> getMultipleDelimiter(String Delimiter)
+    {
+        ArrayList<String> mDelimiter = new ArrayList<String>();
+        for(String x:Delimiter.split("(\\])(\\[)"))
+        {
+            mDelimiter.add(x);
+        }
+
+        return mDelimiter;
     }
 
 }
