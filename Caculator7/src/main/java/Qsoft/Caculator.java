@@ -26,8 +26,17 @@ public class Caculator {
             {
                 String Delimiter = Caculator.getDelimiter(s);
                 String mNumber = s.substring(s.lastIndexOf("\n")+1,s.length());
-                mNumber = mNumber.replace(Delimiter,",");
-                sum = Caculator.getSumNumber(mNumber);
+                if(!Caculator.isDelimiterHasBrakets(Delimiter))
+                {
+                    mNumber = mNumber.replace(Delimiter,",");
+                    sum = Caculator.getSumNumber(mNumber);
+                }else
+                {
+                    Delimiter = Delimiter.substring(Delimiter.indexOf("[")+1,Delimiter.lastIndexOf("]"));
+                    mNumber = mNumber.replace(Delimiter,",");
+                    sum = Caculator.getSumNumber(mNumber);
+                }
+
             }
 
 
@@ -83,5 +92,12 @@ public class Caculator {
             }
         }
         return a;
+    }
+    public static boolean isDelimiterHasBrakets(String Delimiter)
+    {
+        Pattern pattern = Pattern.compile("(\\[)(.*)(\\])");
+        if(pattern.matcher(Delimiter).find())
+            return true;
+        return false;
     }
 }
