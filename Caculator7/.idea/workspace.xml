@@ -5,7 +5,7 @@
     <ignored path="Caculator7.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/TestCaculator.java" changelist="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" time="1370503313247" ignored="false" />
-    <file path="/Caculator.java" changelist="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" time="1370503229878" ignored="false" />
+    <file path="/Caculator.java" changelist="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" time="1370503638925" ignored="false" />
     <file path="/fragment.java" changelist="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" time="1370501862729" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,22 +74,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Caculator.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Caculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="58" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
+            <state line="36" column="81" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.30327868">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1350#1359#0" expanded="true" />
+                <element signature="e#1129#1137#0" expanded="true" />
+                <element signature="e#1690#1699#0" expanded="true" />
+                <element signature="e#3367#3375#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCaculator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TestCaculator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="58" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.5355191">
+            <state line="56" column="107" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,8 +108,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java" />
         <option value="$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java" />
       </list>
     </option>
   </component>
@@ -489,20 +491,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="58" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1350#1359#0" expanded="true" />
-          </folding>
+        <state line="56" column="107" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="58" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.5355191">
-          <folding />
+        <state line="36" column="81" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.30327868">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1129#1137#0" expanded="true" />
+            <element signature="e#1690#1699#0" expanded="true" />
+            <element signature="e#3367#3375#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

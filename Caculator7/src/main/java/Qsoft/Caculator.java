@@ -33,13 +33,17 @@ public class Caculator {
                 }else
                 {
                     Delimiter = Delimiter.substring(Delimiter.indexOf("[")+1,Delimiter.lastIndexOf("]"));
+                    ArrayList<String> mMultipleDelimiter = new ArrayList<String>();
+                    mMultipleDelimiter = Caculator.getMultipleDelimiter(Delimiter);
+                    for(String x: mMultipleDelimiter)
+                    {
+                        mNumber = mNumber.replaceAll(Pattern.quote(x),",");
+                    }
                     mNumber = mNumber.replace(Delimiter,",");
                     sum = Caculator.getSumNumber(mNumber);
                 }
 
             }
-
-
         }
         return sum;
     }
@@ -99,5 +103,14 @@ public class Caculator {
         if(pattern.matcher(Delimiter).find())
             return true;
         return false;
+    }
+    public static ArrayList<String> getMultipleDelimiter(String Delimiter)
+    {
+        ArrayList<String> mDelimiters = new ArrayList<String>();
+        for(String x: Delimiter.split("(\\])(\\[)"))
+        {
+            mDelimiters.add(x);
+        }
+        return mDelimiters;
     }
 }
