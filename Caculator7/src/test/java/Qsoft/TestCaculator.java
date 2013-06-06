@@ -44,18 +44,27 @@ public class TestCaculator extends TestCase {
         }catch (Exception e)
         {
             assertEquals("negatives not allowed -1 -4",e.getMessage());
+            //OK
         }
     }
     public void testStringHasBigNumbers()
     {
         assertEquals(2,Caculator.add("2,1000"));
+        //OK
     }
     public void testStringHasUnknownDelimiterLenght()
     {
         assertEquals(3,Caculator.add("//[**2*]\n1**2*2**2*3000"));
+        //OK
     }
     public void testStringHasDelimiterSigleDifference()
     {
         assertEquals(6,Caculator.add("//[*][%]\n1*2%3"));
+        //OK
+    }
+    public void testStringHasMultipleDelimiterLongerOne()
+    {
+        assertEquals(10,Caculator.add("//[**%][()&]\n1**%2()&4()&3"));
+        //OK
     }
 }

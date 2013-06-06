@@ -4,9 +4,9 @@
     <list default="true" id="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" name="Default" comment="" />
     <ignored path="Caculator7.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/TestCaculator.java" changelist="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" time="1370503313247" ignored="false" />
+    <file path="/TestCaculator.java" changelist="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" time="1370503865902" ignored="false" />
     <file path="/Caculator.java" changelist="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" time="1370503638925" ignored="false" />
-    <file path="/fragment.java" changelist="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" time="1370501862729" ignored="false" />
+    <file path="/fragment.java" changelist="79c9f6ef-d7a5-4ad2-a566-d50734b28c8a" time="1370503809418" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Caculator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Caculator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="81" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.30327868">
+            <state line="42" column="111" selection-start="1519" selection-end="1519" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1129#1137#0" expanded="true" />
@@ -88,10 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCaculator.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TestCaculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="107" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0">
+            <state line="46" column="16" selection-start="1183" selection-end="1183" vertical-scroll-proportion="-0.3715847">
               <folding />
             </state>
           </provider>
@@ -108,8 +108,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java" />
       </list>
     </option>
   </component>
@@ -396,7 +396,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -491,22 +491,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="107" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Qsoft/Caculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="81" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.30327868">
+        <state line="42" column="111" selection-start="1519" selection-end="1519" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1129#1137#0" expanded="true" />
             <element signature="e#1690#1699#0" expanded="true" />
             <element signature="e#3367#3375#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Qsoft/TestCaculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="16" selection-start="1183" selection-end="1183" vertical-scroll-proportion="-0.3715847">
+          <folding />
         </state>
       </provider>
     </entry>
