@@ -1,5 +1,6 @@
 import junit.framework.TestCase;
 import org.junit.Before;
+import org.mockito.ArgumentCaptor;
 
 import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.mock;
@@ -24,7 +25,9 @@ public class TestBankAccount extends TestCase {
     public void testFunctionSaveSureCalled()
     {
         mBankAcount.openAccount("0123456789");
-        verify(mockAcountDAO).save((BankAccountDTO)anyObject());
+        ArgumentCaptor<BankAccountDTO> saveAccountRecords = ArgumentCaptor.forClass(BankAccountDTO.class);
+        verify(mockAcountDAO).save(saveAccountRecords.capture());
+        assertEquals(saveAccountRecords.getValue().getBalance(),0.0,0.1);
 
     }
 }

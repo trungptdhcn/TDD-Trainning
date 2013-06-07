@@ -8,9 +8,9 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 public class BankAccountDTO {
-    String accountNumber;
-    double balance;
-    Date openTimestampt;
+    private String accountNumber;
+    private double balance;
+    private Date openTimestampt;
     public BankAccountDTO(String accountNumber)
     {
         this.accountNumber = accountNumber;
