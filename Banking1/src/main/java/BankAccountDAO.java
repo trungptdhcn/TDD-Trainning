@@ -9,4 +9,9 @@ public class BankAccountDAO {
     public BankAccountDTO save(BankAccountDTO mBankAccountDTO) {
         return null;
     }
+
+    public BankAccountDTO find(String accountNumber) {
+        return null;
+
+    }
 }

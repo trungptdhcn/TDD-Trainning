@@ -15,4 +15,8 @@ public class BankAccount {
         BankAccountDTO mBankAccountDTO = new BankAccountDTO("0123456789");
         mBankAccountDAO.save(mBankAccountDTO);
     }
+
+    public  BankAccountDTO getAccount(String s) {
+        return mBankAccountDAO.find(s);
+    }
 }

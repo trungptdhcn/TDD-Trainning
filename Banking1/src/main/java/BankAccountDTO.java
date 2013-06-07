@@ -39,4 +39,5 @@ public class BankAccountDTO {
     public void setOpenTimestampt(Date openTimestampt) {
         this.openTimestampt = openTimestampt;
     }
+
 }
