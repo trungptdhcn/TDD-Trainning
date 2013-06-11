@@ -1,8 +1,10 @@
 import junit.framework.TestCase;
 import org.junit.Before;
+import org.mockito.ArgumentCaptor;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.reset;
+import java.util.Calendar;
+
+import static org.mockito.Mockito.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,7 +25,12 @@ public class TestTransaction extends TestCase {
     }
     public void testDepositTransaction()
     {
-
-        Transaction.createTransaction("0123456789",100,"deposit");
+        Calendar c = mock(Calendar.class);
+        TransactionDTO transactionDTO = new TransactionDTO();
+        transactionDTO.setC(c);
+        when(c.getTimeInMillis()).thenReturn(1000);
+        Transaction.createTransaction("0123456789",timeCurent,100,"deposit");
+        ArgumentCaptor<TransactionDTO>transactionRecords = ArgumentCaptor.forClass(TransactionDTO.class);
+        verify(mockTransactionDAO,times(1)).save(transactionRecords.capture());
     }
 }

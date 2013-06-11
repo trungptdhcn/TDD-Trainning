@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Trung
@@ -6,4 +8,9 @@
  * To change this template use File | Settings | File Templates.
  */
 public class TransactionDTO {
+    Calendar c;
+
+    public void setC(Calendar c) {
+        this.c = c;
+    }
 }
