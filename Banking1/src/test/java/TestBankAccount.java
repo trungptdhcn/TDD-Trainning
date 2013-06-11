@@ -1,11 +1,12 @@
 import junit.framework.TestCase;
+import org.junit.After;
 import org.junit.Before;
 import org.mockito.ArgumentCaptor;
 
+import java.util.List;
+
 import static org.mockito.Matchers.anyObject;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -33,10 +34,27 @@ public class TestBankAccount extends TestCase {
     }
     public void testgetAccountFunction()
     {
-        mBankAccountDTO = mBankAcount.getAccount("0123456789");
-        BankAccountDTO expectBankAcount = null;
+        BankAccountDTO expectBankAcount = mBankAcount.openAccount("0123456789");
         when(mockAcountDAO.find("0123456789")).thenReturn(expectBankAcount);
-        assertEquals(mBankAccountDTO,expectBankAcount);
+        mBankAccountDTO = mBankAcount.getAccount(expectBankAcount.getAccountNumber());
+        assertEquals(expectBankAcount,mBankAccountDTO);
         verify(mockAcountDAO).find("0123456789");
+    }
+    @After
+    public void tearDown() throws Exception {
+        if(mockAcountDAO != null) {
+            reset(mockAcountDAO);
+        }
+    }
+    public void testBankAccountDeposit()
+    {
+       BankAccountDTO bankAccountDTO = mBankAcount.openAccount("0123456789");
+       mBankAcount.depositAccount(bankAccountDTO,50.0,"gui vao 50");
+        ArgumentCaptor<BankAccountDTO> agument = ArgumentCaptor.forClass(BankAccountDTO.class);
+
+       verify(mockAcountDAO,times(2)).save(agument.capture());
+       List<BankAccountDTO> list = agument.getAllValues();
+       assertEquals(list.get(1).getBalance(),50.0,0.01);
+
     }
 }

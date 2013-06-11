@@ -11,12 +11,19 @@ public class BankAccount {
     {
         this.mBankAccountDAO = mBankAccountDAO;
     }
-    public void openAccount(String accountNumber) {
+    public BankAccountDTO openAccount(String accountNumber) {
         BankAccountDTO mBankAccountDTO = new BankAccountDTO("0123456789");
         mBankAccountDAO.save(mBankAccountDTO);
+        return mBankAccountDTO;
     }
 
     public  BankAccountDTO getAccount(String s) {
         return mBankAccountDAO.find(s);
+    }
+
+    public  void depositAccount(BankAccountDTO bankAccountDTO,double l,String description) {
+        bankAccountDTO.setBalance(bankAccountDTO.getBalance()+l);
+       // bankAccountDTO.setOpenTimestampt();
+        mBankAccountDAO.save(bankAccountDTO);
     }
 }
