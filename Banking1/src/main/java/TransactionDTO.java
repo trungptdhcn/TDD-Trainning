@@ -8,9 +8,55 @@ import java.util.Calendar;
  * To change this template use File | Settings | File Templates.
  */
 public class TransactionDTO {
-    Calendar c;
+    Calendar c = Calendar.getInstance() ;
+    String accountNumber;
+    double amount;
+    String description;
+    long timeStamp ;
+    public TransactionDTO()
+    {
 
-    public void setC(Calendar c) {
+    }
+    public TransactionDTO(long timeStamp,String accountNumber,double amount,String description)
+    {
+       this.timeStamp = timeStamp;
+       this.accountNumber = accountNumber;
+       this.amount = amount;
+       this.description = description;
+
+    }
+
+    public long getTimeStamp() {
+        return timeStamp;
+    }
+    public void setC(Calendar c)
+    {
         this.c = c;
+
+    }
+
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 }

@@ -15,22 +15,32 @@ import static org.mockito.Mockito.*;
  */
 public class TestTransaction extends TestCase {
     TransactionDAO mockTransactionDAO = mock(TransactionDAO.class);
+    Transaction mTransaction = new Transaction();
     @Before
     public void setUp()
     {
 
         reset(mockTransactionDAO);
-        Transaction.setDAO(mockTransactionDAO);
+
+        mTransaction.setDAO(mockTransactionDAO);
 
     }
     public void testDepositTransaction()
     {
+         TransactionDTO transactionDTO = new TransactionDTO();
         Calendar c = mock(Calendar.class);
-        TransactionDTO transactionDTO = new TransactionDTO();
         transactionDTO.setC(c);
-        when(c.getTimeInMillis()).thenReturn(1000);
-        Transaction.createTransaction("0123456789",timeCurent,100,"deposit");
+        when(c.getTimeInMillis()).thenReturn(1000L);
+
+        transactionDTO = mTransaction.createTransaction(c.getTimeInMillis(),"0123456789",50,"deposit");
+
+
+        //when(mockTransactionDAO.save(transactionDTO))
         ArgumentCaptor<TransactionDTO>transactionRecords = ArgumentCaptor.forClass(TransactionDTO.class);
-        verify(mockTransactionDAO,times(1)).save(transactionRecords.capture());
+        verify(mockTransactionDAO).save(transactionRecords.capture());
+        assertEquals(transactionRecords.getValue().getAccountNumber(),"0123456789");
+        assertEquals(transactionRecords.getValue().getDescription(),"deposit");
+        assertEquals(transactionRecords.getValue().getAmount(),50.0);
+        assertEquals(transactionRecords.getValue().getTimeStamp(),1000L);
     }
 }
