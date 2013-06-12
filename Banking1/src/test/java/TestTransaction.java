@@ -2,7 +2,9 @@ import junit.framework.TestCase;
 import org.junit.Before;
 import org.mockito.ArgumentCaptor;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 import static org.mockito.Mockito.*;
 

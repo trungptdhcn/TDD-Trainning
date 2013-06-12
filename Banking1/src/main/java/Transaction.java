@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,9 +16,15 @@ public class Transaction {
         Transaction.mTransactionDAO = mTransactionDAO;
     }
 
-    public static void createTransaction(String accountNumber, double amount, String description,long timeStamp) {
-        TransactionDTO account = new TransactionDTO(accountNumber,amount,description,timeStamp);
-        mTransactionDAO.save(account);
+    public static TransactionDTO createTransaction(String accountNumber, double amount, String description,long timeStamp) {
+        TransactionDTO transactionDTO = new TransactionDTO(accountNumber,amount,description,timeStamp);
+        mTransactionDAO.save(transactionDTO);
+        return transactionDTO;
+    }
 
+    public static List<TransactionDTO> getTransactions(String accountNumber) {
+        List<TransactionDTO> mListTransactions = new ArrayList<TransactionDTO>();
+        mListTransactions = mTransactionDAO.get(accountNumber);
+        return mListTransactions;
     }
 }
