@@ -45,12 +45,16 @@ public class TestBankAccount extends TestCase {
     }
     public void testTransactionChangesBalanceAndIsPersistent()
     {
-        ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
-        BankAccountDTO account = BankAccount.openAccount("0123456789");
+
+        BankAccountDTO account = BankAccount.openAccount("0123456780");
+        System.out.println(account.getBalance());
         BankAccount.doTransaction(account,100.0);
-        verify(mockBankAccountDAO,times(1)).save(argument.capture());
+        ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
+
+        BankAccount.doTransaction(account,-10.0);
+        verify(mockBankAccountDAO,times(3)).save(argument.capture());
         List<BankAccountDTO> saveRecordsAccount = argument.getAllValues();
-        assertEquals(saveRecordsAccount.get(1).getBalance(),100.0,0.01);
+        assertEquals(saveRecordsAccount.get(2).getBalance(),90.0,0.01);
     }
 
 }

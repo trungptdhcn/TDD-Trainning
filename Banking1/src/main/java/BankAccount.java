@@ -14,7 +14,9 @@ public class BankAccount {
     }
 
     public static BankAccountDTO openAccount(String accountNumber) {
-        return mBankAccountDAO.save(new BankAccountDTO(accountNumber));
+        BankAccountDTO bankAccountDTO = new BankAccountDTO(accountNumber);
+        mBankAccountDAO.save(bankAccountDTO);
+        return bankAccountDTO;
 
 
     }
@@ -24,9 +26,9 @@ public class BankAccount {
 
     }
 
-    public static void doTransaction(BankAccountDTO mBankAccountDTO,double amount) {
+    public static void doTransaction(BankAccountDTO bankAccountDTO,double amount) {
 
-        mBankAccountDTO.setBalance(mBankAccountDTO.getBalance()+amount);
-        mBankAccountDAO.save(mBankAccountDTO);
+        bankAccountDTO.setBalance(bankAccountDTO.getBalance()+amount);
+        mBankAccountDAO.save(bankAccountDTO);
     }
 }

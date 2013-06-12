@@ -33,6 +33,6 @@ public class TestTransaction extends TestCase {
         assertEquals(TransactionRecords.getValue().getAccountNumber(),"0123456789");
         assertEquals(TransactionRecords.getValue().getDescription(),"deposit");
         assertEquals(TransactionRecords.getValue().getTimeStamp(),1000L);
-
     }
+
 }
