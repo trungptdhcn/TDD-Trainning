@@ -22,9 +22,9 @@ public class Transaction {
         return transactionDTO;
     }
 
-    public static List<TransactionDTO> getTransactions(String accountNumber) {
+    public static List<TransactionDTO> getTransactions(String accountNumber,long startTime,long endTime) {
         List<TransactionDTO> mListTransactions = new ArrayList<TransactionDTO>();
-        mListTransactions = mTransactionDAO.get(accountNumber);
+        mListTransactions = mTransactionDAO.get(accountNumber,startTime,endTime);
         return mListTransactions;
     }
 }

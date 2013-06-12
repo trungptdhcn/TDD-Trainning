@@ -14,7 +14,6 @@ public class BankAccount {
 
     public static void setDAO(BankAccountDAO mBankAccountDAO) {
         BankAccount.mBankAccountDAO = mBankAccountDAO;
-        //BankAccount.mTransactionDAO = mTransactionDAO;
 
     }
 
@@ -40,10 +39,10 @@ public class BankAccount {
         return mTransactionDTO;
 
     }
-    public static List<TransactionDTO> getTransactionsOccurred(String accountNumber)
+    public static List<TransactionDTO> getTransactionsOccurred(String accountNumber,long startTime,long endTime)
     {
         List<TransactionDTO> mListTransactions = new ArrayList<TransactionDTO>();
-        mListTransactions = Transaction.getTransactions(accountNumber);
+        mListTransactions = Transaction.getTransactions(accountNumber,startTime,endTime);
         return mListTransactions;
     }
 }
