@@ -45,4 +45,10 @@ public class BankAccount {
         mListTransactions = Transaction.getTransactions(accountNumber,startTime,endTime);
         return mListTransactions;
     }
+
+    public static void getTransactionNews(String accountNumber, int Ntransactions) {
+        List<TransactionDTO>mListTransactionsNew = new ArrayList<TransactionDTO>();
+        mListTransactionsNew=Transaction.getNewTransactions(accountNumber,Ntransactions);
+        //return mListTransactionsNew;
+    }
 }

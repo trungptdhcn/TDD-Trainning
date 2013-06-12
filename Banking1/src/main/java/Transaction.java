@@ -27,4 +27,11 @@ public class Transaction {
         mListTransactions = mTransactionDAO.get(accountNumber,startTime,endTime);
         return mListTransactions;
     }
+
+    public static List<TransactionDTO> getNewTransactions(String accountNumber, int ntransactions) {
+
+        List<TransactionDTO> mListTransactionNews = new ArrayList<TransactionDTO>();
+        mListTransactionNews = mTransactionDAO.getNewTransactions(accountNumber,ntransactions);
+        return mListTransactionNews;
+    }
 }

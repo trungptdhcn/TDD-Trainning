@@ -80,5 +80,15 @@ public class TestBankAccount extends TestCase {
         assertEquals(startTime2.getValue().longValue(),1200L);
         assertEquals(agumentString.getValue().toString(),"0123456789");
     }
+    public void testGetNTransactionNews()
+    {
+        BankAccount.getTransactionNews("0123456789",9);
+        ArgumentCaptor<String> argumentAccountNumber = ArgumentCaptor.forClass(String.class);
+        ArgumentCaptor<Integer> argumentTransactions = ArgumentCaptor.forClass(Integer.class);
+        verify(mockTransactionDAO).getNewTransactions(argumentAccountNumber.capture(),argumentTransactions.capture());
+
+        assertEquals(argumentAccountNumber.getValue().toString(),"0123456789");
+        assertEquals(argumentTransactions.getValue().intValue(),9);
+    }
 
 }
