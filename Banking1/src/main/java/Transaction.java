@@ -8,17 +8,15 @@ import java.util.Calendar;
  * To change this template use File | Settings | File Templates.
  */
 public class Transaction {
-    TransactionDAO mTransactionDAO;
-    public  void setDAO(TransactionDAO mockTransactionDAO) {
-        this.mTransactionDAO = mockTransactionDAO;
+    private static TransactionDAO mTransactionDAO;
 
+    public static void setTransactionDAO(TransactionDAO mTransactionDAO) {
+        Transaction.mTransactionDAO = mTransactionDAO;
     }
-    public TransactionDTO createTransaction(long timeStamp,String accountNumber,double amount,String description)
-    {
 
-        TransactionDTO mTransactionDTO =  new TransactionDTO(timeStamp,accountNumber,amount,description);
-        mTransactionDAO.save(mTransactionDTO);
-        return mTransactionDTO;
+    public static void createTransaction(String accountNumber, double amount, String description,long timeStamp) {
+        TransactionDTO account = new TransactionDTO(accountNumber,amount,description,timeStamp);
+        mTransactionDAO.save(account);
 
     }
 }

@@ -6,7 +6,9 @@
  * To change this template use File | Settings | File Templates.
  */
 public class TransactionDAO {
-    public TransactionDTO save(TransactionDTO account) {
+
+    public TransactionDTO save(TransactionDTO transactionDTO) {
+
         return null;
     }
 }

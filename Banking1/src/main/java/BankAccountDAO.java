@@ -6,12 +6,12 @@
  * To change this template use File | Settings | File Templates.
  */
 public class BankAccountDAO {
+
     public BankAccountDTO save(BankAccountDTO mBankAccountDTO) {
         return null;
     }
 
     public BankAccountDTO find(String accountNumber) {
         return null;
-
     }
 }

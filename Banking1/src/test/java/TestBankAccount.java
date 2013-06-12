@@ -16,45 +16,41 @@ import static org.mockito.Mockito.*;
  * To change this template use File | Settings | File Templates.
  */
 public class TestBankAccount extends TestCase {
-    private BankAccount mBankAcount;
-    private BankAccountDAO mockAcountDAO = mock(BankAccountDAO.class);
-    private BankAccountDTO mBankAccountDTO = new BankAccountDTO("");
-
+    private BankAccountDAO mockBankAccountDAO = mock(BankAccountDAO.class);
     @Before
     public void setUp()
     {
-        mBankAcount = new BankAccount(mockAcountDAO);
+        reset(mockBankAccountDAO);
+        BankAccount.setDAO(mockBankAccountDAO);
     }
-    public void testFunctionSaveSureCalled()
+    public void testNewAccountHasZeroBalanceAndIsPersitent()
     {
-        mBankAcount.openAccount("0123456789");
-        ArgumentCaptor<BankAccountDTO> saveAccountRecords = ArgumentCaptor.forClass(BankAccountDTO.class);
-        verify(mockAcountDAO).save(saveAccountRecords.capture());
-        assertEquals(saveAccountRecords.getValue().getBalance(),0.0,0.1);
-    }
-    public void testgetAccountFunction()
-    {
-        BankAccountDTO expectBankAcount = mBankAcount.openAccount("0123456789");
-        when(mockAcountDAO.find("0123456789")).thenReturn(expectBankAcount);
-        mBankAccountDTO = mBankAcount.getAccount(expectBankAcount.getAccountNumber());
-        assertEquals(expectBankAcount,mBankAccountDTO);
-        verify(mockAcountDAO).find("0123456789");
-    }
-    @After
-    public void tearDown() throws Exception {
-        if(mockAcountDAO != null) {
-            reset(mockAcountDAO);
-        }
-    }
-    public void testBankAccountDeposit()
-    {
-       BankAccountDTO bankAccountDTO = mBankAcount.openAccount("0123456789");
-       mBankAcount.depositAccount(bankAccountDTO,50.0,"gui vao 50");
-        ArgumentCaptor<BankAccountDTO> agument = ArgumentCaptor.forClass(BankAccountDTO.class);
-
-       verify(mockAcountDAO,times(2)).save(agument.capture());
-       List<BankAccountDTO> list = agument.getAllValues();
-       assertEquals(list.get(1).getBalance(),50.0,0.01);
+        BankAccount.openAccount("0123456789");
+        ArgumentCaptor<BankAccountDTO> savedAccountRecords = ArgumentCaptor.forClass(BankAccountDTO.class);
+        verify(mockBankAccountDAO).save(savedAccountRecords.capture());
+        assertEquals(savedAccountRecords.getValue().getBalance(),0.0,0.01);
+        assertEquals(savedAccountRecords.getValue().getAccountNumber(),"0123456789");
 
     }
+    public void testCanGetAccountDTOfromDAO()
+    {
+        BankAccount.openAccount("0123456789");
+        BankAccountDTO expectAccountDTO = null;
+        when(mockBankAccountDAO.find("0123456789")).thenReturn(expectAccountDTO);
+        BankAccountDTO actualBankAccountDTO = BankAccount.getAccount("0123456789");
+        assertEquals(expectAccountDTO,actualBankAccountDTO);
+        verify(mockBankAccountDAO).find("0123456789");
+
+
+    }
+    public void testTransactionChangesBalanceAndIsPersistent()
+    {
+        ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+        BankAccount.doTransaction(account,100.0);
+        verify(mockBankAccountDAO,times(1)).save(argument.capture());
+        List<BankAccountDTO> saveRecordsAccount = argument.getAllValues();
+        assertEquals(saveRecordsAccount.get(1).getBalance(),100.0,0.01);
+    }
+
 }

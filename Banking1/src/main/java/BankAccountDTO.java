@@ -8,19 +8,11 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 public class BankAccountDTO {
+
     private String accountNumber;
     private double balance;
-    private Date openTimestampt;
     public BankAccountDTO(String accountNumber)
     {
-        this.accountNumber = accountNumber;
-    }
-
-    public String getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
 
@@ -28,16 +20,17 @@ public class BankAccountDTO {
         return balance;
     }
 
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    @Override
+    public boolean equals(Object otherAccount) {
+        BankAccountDTO other = (BankAccountDTO)otherAccount;
+        return accountNumber.equals(other.accountNumber) && ((balance - other.balance) < 0.01);
+    }
+
     public void setBalance(double balance) {
         this.balance = balance;
     }
-
-    public Date getOpenTimestampt() {
-        return openTimestampt;
-    }
-
-    public void setOpenTimestampt(Date openTimestampt) {
-        this.openTimestampt = openTimestampt;
-    }
-
 }
