@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Trung
@@ -7,10 +9,12 @@
  */
 public class BankAccount {
     private static BankAccountDAO bankAccountDAO;
+    //private static TransactionDAO transactionDAO;
 
-    public static void setDAO(BankAccountDAO bankAccountDAO)
+    public static void setDAO(BankAccountDAO bankAccountDAO,TransactionDAO mTransactionDAO)
     {
         BankAccount.bankAccountDAO = bankAccountDAO;
+        Transaction.setDAO(mTransactionDAO);
     }
 
     public static BankAccountDTO openAccount(String accountNumber) {
@@ -28,5 +32,10 @@ public class BankAccount {
         accountDTO.setBalance(accountDTO.getBalance()+amount);
         bankAccountDAO.save(accountDTO);
 
+    }
+
+    public static List<TransactionDTO> getTransactionsOccurred(String accountNumber) {
+        return Transaction.getTransactionsOccurred(accountNumber);
+        //return null;
     }
 }

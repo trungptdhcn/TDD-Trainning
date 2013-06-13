@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Trung
@@ -8,5 +10,9 @@
 public class TransactionDAO {
     public void save(TransactionDTO transactionDTO) {
 
+    }
+
+    public  List<TransactionDTO> get(String accountNumber) {
+        return null;
     }
 }

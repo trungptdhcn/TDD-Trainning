@@ -2,6 +2,7 @@ import junit.framework.TestCase;
 import org.junit.Before;
 import org.mockito.ArgumentCaptor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.Mockito.*;
@@ -15,11 +16,12 @@ import static org.mockito.Mockito.*;
  */
 public class TestBankAccount extends TestCase {
     private BankAccountDAO mockBankAccountDAO = mock(BankAccountDAO.class);
+    private TransactionDAO mockTransactionDAO = mock(TransactionDAO.class);
     @Before
     public void setUp()
     {
         reset(mockBankAccountDAO);
-        BankAccount.setDAO(mockBankAccountDAO);
+        BankAccount.setDAO(mockBankAccountDAO,mockTransactionDAO);
 
     }
     public void testOpenAccount()
@@ -59,6 +61,14 @@ public class TestBankAccount extends TestCase {
         assertEquals(saveRecord2.get(2).getBalance(),90.0,0.01);
     }
 
+    public void testGetTransactionsOccurred()
+    {
+        List<TransactionDTO> mTransactionDTOs = new ArrayList<TransactionDTO>();
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+        BankAccount.getTransactionsOccurred(account.getAccountNumber());
+        when(BankAccount.getTransactionsOccurred(account.getAccountNumber())).thenReturn(mTransactionDTOs);
+        verify(mockTransactionDAO).get("0123456789");
+    }
 
 
 }

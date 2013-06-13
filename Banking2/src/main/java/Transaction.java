@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Trung
@@ -17,4 +19,7 @@ public class Transaction {
         mTransactionDAO.save(mTransactionDTO);
     }
 
+    public static List<TransactionDTO> getTransactionsOccurred(String accountNumber) {
+        return mTransactionDAO.get(accountNumber);
+    }
 }
