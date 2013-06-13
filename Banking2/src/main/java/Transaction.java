@@ -13,7 +13,6 @@ public class Transaction {
     }
 
     public static void doDeposit(String accountNumber, long timeStamp, double amount, String description) {
-        TransactionDTO mTransactionDTO = new TransactionDTO(accountNumber,timeStamp,amount,description);
-        mTransactionDAO.save(mTransactionDTO);
+
     }
 }
