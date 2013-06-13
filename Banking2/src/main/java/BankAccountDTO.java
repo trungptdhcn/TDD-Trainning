@@ -8,6 +8,8 @@
 public class BankAccountDTO {
     private double balance;
     private String accountNumber;
+    private String description;
+
     public BankAccountDTO(String accountNumber)
     {
         this.accountNumber = accountNumber;
@@ -18,5 +20,13 @@ public class BankAccountDTO {
 
     public String getAccountNumber() {
         return accountNumber;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 }

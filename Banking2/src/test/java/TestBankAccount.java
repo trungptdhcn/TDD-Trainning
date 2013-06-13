@@ -2,9 +2,9 @@ import junit.framework.TestCase;
 import org.junit.Before;
 import org.mockito.ArgumentCaptor;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.reset;
-import static org.mockito.Mockito.verify;
+import java.util.List;
+
+import static org.mockito.Mockito.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -38,4 +38,21 @@ public class TestBankAccount extends TestCase {
         //ArgumentCaptor<S>
         verify(mockBankAccountDAO).find("0123456789");
     }
+
+    public void testDepositAccount()
+    {
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+
+        BankAccount.deposit(account,100.0,"deposit");
+        ArgumentCaptor<BankAccountDTO> agument = ArgumentCaptor.forClass(BankAccountDTO.class);
+        verify(mockBankAccountDAO,times(2)).save(agument.capture());
+        List<BankAccountDTO> saveRecord = agument.getAllValues();
+
+        assertEquals(saveRecord.get(1).getBalance(),100.0,0.01);
+        assertEquals(saveRecord.get(1).getAccountNumber(),"0123456789");
+        //assertEquals(saveRecord.get(1).getDescription(),"deposit");
+    }
+
+
+
 }
