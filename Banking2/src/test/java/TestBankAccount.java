@@ -31,4 +31,11 @@ public class TestBankAccount extends TestCase {
         assertEquals(saveAccountRecords.getValue().getBalance(),0.0,0.01);
         assertEquals(saveAccountRecords.getValue().getAccountNumber(),"0123456789");
     }
+
+    public void testGetAccount()
+    {
+        BankAccount.getAccount("0123456789");
+        //ArgumentCaptor<S>
+        verify(mockBankAccountDAO).find("0123456789");
+    }
 }

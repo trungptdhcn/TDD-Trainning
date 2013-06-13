@@ -4,10 +4,10 @@
     <list default="true" id="79d1c6a8-9c7d-409b-b365-88b80f86459a" name="Default" comment="" />
     <ignored path="Banking2.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/TestBankAccount.java" changelist="79d1c6a8-9c7d-409b-b365-88b80f86459a" time="1371106542000" ignored="false" />
+    <file path="/TestBankAccount.java" changelist="79d1c6a8-9c7d-409b-b365-88b80f86459a" time="1371106910445" ignored="false" />
     <file path="/fragment.java" changelist="79d1c6a8-9c7d-409b-b365-88b80f86459a" time="1371105978459" ignored="false" />
-    <file path="/BankAccount.java" changelist="79d1c6a8-9c7d-409b-b365-88b80f86459a" time="1371106525415" ignored="false" />
-    <file path="/BankAccountDAO.java" changelist="79d1c6a8-9c7d-409b-b365-88b80f86459a" time="1371106373044" ignored="false" />
+    <file path="/BankAccount.java" changelist="79d1c6a8-9c7d-409b-b365-88b80f86459a" time="1371106992650" ignored="false" />
+    <file path="/BankAccountDAO.java" changelist="79d1c6a8-9c7d-409b-b365-88b80f86459a" time="1371106971846" ignored="false" />
     <file path="/BankAccountDTO.java" changelist="79d1c6a8-9c7d-409b-b365-88b80f86459a" time="1371106681120" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +70,7 @@
       <file leaf-file-name="TestBankAccount.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestBankAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="62" selection-start="885" selection-end="885" vertical-scroll-proportion="0.704918">
+            <state line="35" column="57" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.76775956">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,7 +81,7 @@
       <file leaf-file-name="BankAccountDAO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BankAccountDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
+            <state line="15" column="51" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -90,7 +90,7 @@
       <file leaf-file-name="BankAccount.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BankAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+            <state line="21" column="8" selection-start="607" selection-end="694" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -125,10 +125,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/BankAccountDTO.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestBankAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/BankAccountDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/BankAccount.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestBankAccount.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BankAccountDTO.java" />
       </list>
     </option>
   </component>
@@ -262,7 +262,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.TestBankAccount.testOpenAccount">
+  <component name="RunManager" selected="JUnit.TestBankAccount.testGetAccount">
     <configuration default="false" name="TestBankAccount" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Banking2" />
@@ -294,6 +294,29 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestBankAccount" />
       <option name="METHOD_NAME" value="testOpenAccount" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestBankAccount.testGetAccount" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Banking2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestBankAccount" />
+      <option name="METHOD_NAME" value="testGetAccount" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -400,14 +423,16 @@
       <patterns />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JUnit.TestBankAccount" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.TestBankAccount.testOpenAccount" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestBankAccount.testGetAccount" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestBankAccount.testOpenAccount" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestBankAccount" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestBankAccount.testGetAccount" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestBankAccount.testOpenAccount" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestBankAccount" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -446,7 +471,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -521,23 +546,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BankAccountDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Banking2.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BankAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -549,9 +560,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BankAccountDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="51" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BankAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="8" selection-start="607" selection-end="694" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestBankAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="62" selection-start="885" selection-end="885" vertical-scroll-proportion="0.704918">
+        <state line="35" column="57" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.76775956">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
