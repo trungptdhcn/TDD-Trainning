@@ -2,6 +2,7 @@ import junit.framework.TestCase;
 import org.mockito.ArgumentCaptor;
 
 import java.util.Calendar;
+import java.util.List;
 
 import static org.mockito.Mockito.*;
 
@@ -21,29 +22,25 @@ public class TestTransaction extends TestCase {
         reset(mockTransactionDAO);
         Transaction.setDAO(mockTransactionDAO);
     }
-    public void testCreateDepositTransaction()
+    public void testCreateTransaction()
     {
         when(mockCalendar.getTimeInMillis()).thenReturn(1000L);
-        Transaction.doDeposit("0123456789",mockCalendar.getTimeInMillis(),100.0,"deposit");
+        Transaction.doTransaction("0123456789", mockCalendar.getTimeInMillis(), 100.0, "deposit");
+        Transaction.doTransaction("0123456789",mockCalendar.getTimeInMillis(),-50.0,"withdraw");
         ArgumentCaptor<TransactionDTO> transactionRecords = ArgumentCaptor.forClass(TransactionDTO.class);
-        verify(mockTransactionDAO,times(1)).save(transactionRecords.capture());
+        verify(mockTransactionDAO,times(2)).save(transactionRecords.capture());
+        List<TransactionDTO> mRecordTransaction = transactionRecords.getAllValues();
 
-        assertEquals(transactionRecords.getValue().getAccountNumber(),"0123456789");
-        assertEquals(transactionRecords.getValue().getAmount(),100.0,0.01);
-        assertEquals(transactionRecords.getValue().getDescription(),"deposit");
-        assertEquals(transactionRecords.getValue().getTimeStamp(),1000L);
+        assertEquals(mRecordTransaction.get(0).getAccountNumber(),"0123456789");
+        assertEquals(mRecordTransaction.get(0).getAmount(),100.0,0.01);
+        assertEquals(mRecordTransaction.get(0).getDescription(),"deposit");
+        assertEquals(mRecordTransaction.get(0).getTimeStamp(),1000L);
+
+        assertEquals(mRecordTransaction.get(1).getAccountNumber(),"0123456789");
+        assertEquals(mRecordTransaction.get(1).getAmount(),-50.0,0.01);
+        assertEquals(mRecordTransaction.get(1).getDescription(),"withdraw");
+        assertEquals(mRecordTransaction.get(1).getTimeStamp(),1000L);
 
     }
-    public void testCreatWithDrawTransaction()
-    {
-        when(mockCalendar.getTimeInMillis()).thenReturn(1000L);
-        Transaction.doWithDraw("0123456789",mockCalendar.getTimeInMillis(),50.0,"withdraw");
-        ArgumentCaptor<TransactionDTO>transactionRecords = ArgumentCaptor.forClass(TransactionDTO.class);
-        verify(mockTransactionDAO,times(1)).save(transactionRecords.capture());
 
-        assertEquals(transactionRecords.getValue().getAccountNumber(),"0123456789");
-        assertEquals(transactionRecords.getValue().getTimeStamp(),1000L);
-        assertEquals(transactionRecords.getValue().getAmount(),50.0,0.01);
-        assertEquals(transactionRecords.getValue().getDescription(),"withdraw");
-    }
 }

@@ -12,15 +12,9 @@ public class Transaction {
         Transaction.mTransactionDAO = mockTransactionDAO;
     }
 
-    public static void doDeposit(String accountNumber, long timeStamp, double amount, String description) {
+    public static void doTransaction(String accountNumber, long timeStamp, double amount, String description) {
         TransactionDTO mTransactionDTO = new TransactionDTO(accountNumber,timeStamp,amount,description);
         mTransactionDAO.save(mTransactionDTO);
     }
 
-    public static void doWithDraw(String accountNumber, long timeStamp, double amount, String description) {
-        TransactionDTO mTransactionDTO = new TransactionDTO(accountNumber,timeStamp,amount,description);
-        mTransactionDAO.save(mTransactionDTO);
-
-
-    }
 }
