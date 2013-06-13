@@ -34,7 +34,7 @@ public class TestBankAccount extends TestCase {
 
     public void testGetAccount()
     {
-        BankAccount.getAccount("0123456789");
+        BankAccountDTO mAccountDTO = BankAccount.getAccount("0123456789");
         //ArgumentCaptor<S>
         verify(mockBankAccountDAO).find("0123456789");
     }

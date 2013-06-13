@@ -19,6 +19,7 @@ public class BankAccount {
     }
 
     public static BankAccountDTO getAccount(String accountNumber) {
-        return null;  //To change body of created methods use File | Settings | File Templates.
+        BankAccountDTO resultBankAccountDTO = bankAccountDAO.find(accountNumber);
+        return resultBankAccountDTO;  //To change body of created methods use File | Settings | File Templates.
     }
 }
