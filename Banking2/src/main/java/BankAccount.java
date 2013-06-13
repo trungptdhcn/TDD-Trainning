@@ -24,14 +24,9 @@ public class BankAccount {
         return resultBankAccountDTO;  //To change body of created methods use File | Settings | File Templates.
     }
 
-    public static void deposit(BankAccountDTO accountDTO, double amount, String description) {
+    public static void doTransaction(BankAccountDTO accountDTO, double amount, String description) {
         accountDTO.setBalance(accountDTO.getBalance()+amount);
         bankAccountDAO.save(accountDTO);
 
-    }
-
-    public static void withdraw(BankAccountDTO account, double amount, String description) {
-        account.setBalance((account.getBalance()-amount));
-        bankAccountDAO.save(account);
     }
 }
