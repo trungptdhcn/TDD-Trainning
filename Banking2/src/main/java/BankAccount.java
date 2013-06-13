@@ -38,4 +38,8 @@ public class BankAccount {
         return Transaction.getTransactionsOccurred(accountNumber);
         //return null;
     }
+
+    public static Void getTransactionsOccurredOnTime(String accountNumber, long startTime, long endTime) {
+        return Transaction.getOnTime(accountNumber,startTime,endTime);
+    }
 }

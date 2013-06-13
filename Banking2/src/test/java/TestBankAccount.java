@@ -69,6 +69,17 @@ public class TestBankAccount extends TestCase {
         when(BankAccount.getTransactionsOccurred(account.getAccountNumber())).thenReturn(mTransactionDTOs);
         verify(mockTransactionDAO).get("0123456789");
     }
+    public void testGetTransactionsOccurredOnTime()
+    {
+        //When
+        List<TransactionDTO> mTransactionDTOs = new ArrayList<TransactionDTO>();
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+
+        BankAccount.getTransactionsOccurredOnTime(account.getAccountNumber(),1000L,1200L);
+        when(BankAccount.getTransactionsOccurredOnTime(account.getAccountNumber(),1000L,1200L)).thenReturn(mTransactionDTOs);
+        verify(mockTransactionDAO).getOnTime("0123456789",1000L,1200L);
+
+    }
 
 
 }
