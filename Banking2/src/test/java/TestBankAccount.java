@@ -62,7 +62,7 @@ public class TestBankAccount extends TestCase {
 
         verify(mockBankAccountDAO,times(3)).save(argument.capture());
         List<BankAccountDTO> saveRecords = argument.getAllValues();
-        assertEquals(saveRecords.get(2).getBalance(),90.0,0.01);
+        assertEquals(saveRecords.get(2).getBalance(),50.0,0.01);
         assertEquals(saveRecords.get(2).getAccountNumber(),"0123456789");
         //assertEquals(saveRecords.get(2).getDescription(),"");
 

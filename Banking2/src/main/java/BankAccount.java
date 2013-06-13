@@ -31,7 +31,7 @@ public class BankAccount {
     }
 
     public static void withdraw(BankAccountDTO account, double amount, String description) {
-
-
+        account.setBalance((account.getBalance()-amount));
+        bankAccountDAO.save(account);
     }
 }
