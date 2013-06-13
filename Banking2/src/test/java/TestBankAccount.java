@@ -19,6 +19,7 @@ public class TestBankAccount extends TestCase {
     public void setUp()
     {
         reset(mockBankAccountDAO);
+        BankAccount.setDAO(mockBankAccountDAO);
 
     }
     public void testOpenAccount()

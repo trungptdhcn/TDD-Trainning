@@ -6,8 +6,15 @@
  * To change this template use File | Settings | File Templates.
  */
 public class BankAccount {
+    private static BankAccountDAO bankAccountDAO;
+
+    public static void setDAO(BankAccountDAO bankAccountDAO)
+    {
+        BankAccount.bankAccountDAO = bankAccountDAO;
+    }
+
     public static void openAccount(String accountNumber) {
-
-
+        BankAccountDTO account = new BankAccountDTO(accountNumber);
+        bankAccountDAO.save(account);
     }
 }

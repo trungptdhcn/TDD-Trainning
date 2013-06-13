@@ -6,10 +6,13 @@
  * To change this template use File | Settings | File Templates.
  */
 public class BankAccountDTO {
-    private String balance;
+    private double balance;
     private String accountNumber;
-
-    public String getBalance() {
+    public BankAccountDTO(String accountNumber)
+    {
+        this.accountNumber = accountNumber;
+    }
+    public double getBalance() {
         return balance;
     }
 
