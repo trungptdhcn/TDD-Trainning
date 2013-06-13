@@ -1,6 +1,9 @@
 import junit.framework.TestCase;
+import org.mockito.ArgumentCaptor;
 
-import static org.mockito.Mockito.reset;
+import java.util.Calendar;
+
+import static org.mockito.Mockito.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,11 +14,25 @@ import static org.mockito.Mockito.reset;
  */
 public class TestTransaction extends TestCase {
     private TransactionDAO mockTransactionDAO = mock(TransactionDAO.class);
+    private Calendar mockCalendar = mock(Calendar.class);
 
     public void setUp()
     {
         reset(mockTransactionDAO);
         Transaction.setDAO(mockTransactionDAO);
     }
-    public void test
+    public void testCreateDepositTransaction()
+    {
+        when(mockCalendar.getTimeInMillis()).thenReturn(1000L);
+        Transaction.doDeposit("0123456789",mockCalendar.getTimeInMillis(),100.0,"deposit");
+        ArgumentCaptor<TransactionDTO> transactionRecords = ArgumentCaptor.forClass(TransactionDTO.class);
+        verify(mockTransactionDAO,times(1)).save(transactionRecords.capture());
+
+        assertEquals(transactionRecords.getValue().getAccountNumber(),"0123456789");
+        assertEquals(transactionRecords.getValue().getAmount(),100.0,0.01);
+        assertEquals(transactionRecords.getValue().getDescription(),"deposit");
+        assertEquals(transactionRecords.getValue().getTimeStamp(),1000L);
+
+    }
+
 }
