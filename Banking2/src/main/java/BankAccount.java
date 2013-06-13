@@ -29,4 +29,9 @@ public class BankAccount {
         bankAccountDAO.save(accountDTO);
 
     }
+
+    public static void withdraw(BankAccountDTO account, double amount, String description) {
+
+
+    }
 }
