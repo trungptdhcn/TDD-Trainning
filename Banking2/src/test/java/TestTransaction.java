@@ -34,5 +34,16 @@ public class TestTransaction extends TestCase {
         assertEquals(transactionRecords.getValue().getTimeStamp(),1000L);
 
     }
+    public void testCreatWithDrawTransaction()
+    {
+        when(mockCalendar.getTimeInMillis()).thenReturn(1000L);
+        Transaction.doWithDraw("0123456789",mockCalendar.getTimeInMillis(),50.0,"withdraw");
+        ArgumentCaptor<TransactionDTO>transactionRecords = ArgumentCaptor.forClass(TransactionDTO.class);
+        verify(mockTransactionDAO,times(1)).save(transactionRecords.capture());
 
+        assertEquals(transactionRecords.getValue().getAccountNumber(),"0123456789");
+        assertEquals(transactionRecords.getValue().getTimeStamp(),1000L);
+        assertEquals(transactionRecords.getValue().getAmount(),50.0,0.01);
+        assertEquals(transactionRecords.getValue().getDescription(),"withdraw");
+    }
 }

@@ -16,4 +16,9 @@ public class Transaction {
         TransactionDTO mTransactionDTO = new TransactionDTO(accountNumber,timeStamp,amount,description);
         mTransactionDAO.save(mTransactionDTO);
     }
+
+    public static void doWithDraw(String accountNumber, long timeStamp, double amount, String description) {
+
+
+    }
 }
