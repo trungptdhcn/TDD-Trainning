@@ -1,3 +1,4 @@
+import javafx.beans.binding.When;
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.mockito.ArgumentCaptor;
@@ -75,9 +76,20 @@ public class TestBankAccount extends TestCase {
         List<TransactionDTO> mTransactionDTOs = new ArrayList<TransactionDTO>();
         BankAccountDTO account = BankAccount.openAccount("0123456789");
 
-        BankAccount.getTransactionsOccurredOnTime(account.getAccountNumber(),1000L,1200L);
+        BankAccount.getTransactionsOccurredOnTime(account.getAccountNumber(), 1000L, 1200L);
         when(BankAccount.getTransactionsOccurredOnTime(account.getAccountNumber(),1000L,1200L)).thenReturn(mTransactionDTOs);
         verify(mockTransactionDAO).getOnTime("0123456789",1000L,1200L);
+    }
+    public void testGetNTransactionsNews()
+    {
+        List<TransactionDTO> mTransactionDTONews = new ArrayList<TransactionDTO>();
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+        BankAccount.getNTransactionNews(account.getAccountNumber(),9);
+        ArgumentCaptor<Integer> NumberTransactions = ArgumentCaptor.forClass(Integer.class);
+
+        when(BankAccount.getNTransactionNews(account.getAccountNumber(),9)).thenReturn(mTransactionDTONews);
+        verify(mockTransactionDAO).getNTransactionNews("0123456789",NumberTransactions.capture());
+        assertEquals(NumberTransactions.getValue().intValue(),9);
 
     }
 

@@ -19,4 +19,7 @@ public class TransactionDAO {
         return null;
     }
 
+    public List<TransactionDTO> getNTransactionNews(String accountNumber, int n) {
+        return null;  //To change body of created methods use File | Settings | File Templates.
+    }
 }

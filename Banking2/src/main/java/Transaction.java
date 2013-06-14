@@ -26,4 +26,8 @@ public class Transaction {
     public static List<TransactionDTO> getTransactionsOccurredOnTime(String accountNumber, long startTime, long endTime) {
         return mTransactionDAO.getOnTime(accountNumber, startTime, endTime);  //To change body of created methods use File | Settings | File Templates.
     }
+
+    public static List<TransactionDTO> getNTransactionNews(String accountNumber, int n) {
+        return mTransactionDAO.getNTransactionNews(accountNumber,n);
+    }
 }
