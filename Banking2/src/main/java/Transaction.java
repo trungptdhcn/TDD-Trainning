@@ -23,7 +23,7 @@ public class Transaction {
         return mTransactionDAO.get(accountNumber);
     }
 
-    public static Void getOnTime(String accountNumber, long startTime, long endTime) {
-        return null;  //To change body of created methods use File | Settings | File Templates.
+    public static List<TransactionDTO> getTransactionsOccurredOnTime(String accountNumber, long startTime, long endTime) {
+        return mTransactionDAO.getOnTime(accountNumber, startTime, endTime);  //To change body of created methods use File | Settings | File Templates.
     }
 }

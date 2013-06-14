@@ -15,4 +15,8 @@ public class TransactionDAO {
     public  List<TransactionDTO> get(String accountNumber) {
         return null;
     }
+    public  List<TransactionDTO> getOnTime(String accountNumber,long startTime,long endTime) {
+        return null;
+    }
+
 }

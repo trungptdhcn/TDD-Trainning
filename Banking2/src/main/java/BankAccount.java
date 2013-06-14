@@ -39,7 +39,7 @@ public class BankAccount {
         //return null;
     }
 
-    public static Void getTransactionsOccurredOnTime(String accountNumber, long startTime, long endTime) {
-        return Transaction.getOnTime(accountNumber,startTime,endTime);
+    public static  List<TransactionDTO> getTransactionsOccurredOnTime(String accountNumber, long startTime, long endTime) {
+        return Transaction.getTransactionsOccurredOnTime(accountNumber,startTime,endTime);
     }
 }
