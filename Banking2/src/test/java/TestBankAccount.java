@@ -86,9 +86,10 @@ public class TestBankAccount extends TestCase {
         BankAccountDTO account = BankAccount.openAccount("0123456789");
         BankAccount.getNTransactionNews(account.getAccountNumber(),9);
         ArgumentCaptor<Integer> NumberTransactions = ArgumentCaptor.forClass(Integer.class);
+        ArgumentCaptor<String> accountNumbers = ArgumentCaptor.forClass(String.class);
 
         when(BankAccount.getNTransactionNews(account.getAccountNumber(),9)).thenReturn(mTransactionDTONews);
-        verify(mockTransactionDAO).getNTransactionNews("0123456789",NumberTransactions.capture());
+        verify(mockTransactionDAO).getNTransactionNews(accountNumbers.capture(),NumberTransactions.capture());
         assertEquals(NumberTransactions.getValue().intValue(),9);
 
     }
