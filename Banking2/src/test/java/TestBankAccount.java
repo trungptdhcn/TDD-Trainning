@@ -80,7 +80,7 @@ public class TestBankAccount extends TestCase {
         when(BankAccount.getTransactionsOccurredOnTime(account.getAccountNumber(),1000L,1200L)).thenReturn(mTransactionDTOs);
         verify(mockTransactionDAO).getOnTime("0123456789",1000L,1200L);
     }
-    public void testGetNTransactionsNews()
+    public void testGetLastestTransactions()
     {
         List<TransactionDTO> mTransactionDTONews = new ArrayList<TransactionDTO>();
         BankAccountDTO account = BankAccount.openAccount("0123456789");
