@@ -9,6 +9,10 @@ public class BankAccountDTO {
     private String numberAccount;
     private double balance;
 
+    public BankAccountDTO(String accountNumber) {
+        this.numberAccount = accountNumber;
+    }
+
     public String getNumberAccount() {
         return numberAccount;
     }

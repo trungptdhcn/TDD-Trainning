@@ -4,16 +4,17 @@
     <list default="true" id="7629d454-d06b-490b-b88e-6ad0a19a5ca9" name="Default" comment="" />
     <ignored path="Banking3.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="$PROJECT_DIR$/../WebServiceTest2/.idea/workspace.xml" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371625688576" ignored="false" />
-    <file path="$PROJECT_DIR$/../MyStack2/.idea/workspace.xml" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371625688576" ignored="false" />
-    <file path="/TestBankAccount.java" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371625558051" ignored="false" />
+    <file path="$PROJECT_DIR$/../WebServiceTest2/.idea/workspace.xml" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371625920210" ignored="false" />
+    <file path="$PROJECT_DIR$/../MyStack2/.idea/workspace.xml" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371625920210" ignored="false" />
+    <file path="/TestBankAccount.java" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371625938749" ignored="false" />
     <file path="$PROJECT_DIR$/../Banking2/src/test/java/TestBankAccount.java" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371570501541" ignored="false" />
     <file path="$PROJECT_DIR$/../../../TRAINING/Code/Test/src/main/java/Test.java" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371575163325" ignored="false" />
     <file path="/Test.java" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371573517562" ignored="false" />
     <file path="$PROJECT_DIR$/../../../TRAINING/Code/Test/src/main/java/MapTest.java" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371576952585" ignored="false" />
     <file path="/MapTest.java" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371576941323" ignored="false" />
-    <file path="/BankAccount.java" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371625578192" ignored="false" />
+    <file path="/BankAccount.java" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371626138609" ignored="false" />
     <file path="/BankAccountDAO.java" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371625589378" ignored="false" />
+    <file path="/BankAccountDTO.java" changelist="7629d454-d06b-490b-b88e-6ad0a19a5ca9" time="1371626131246" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +85,7 @@
       <file leaf-file-name="TestBankAccount.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestBankAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="33" selection-start="579" selection-end="579" vertical-scroll-proportion="0.73497266">
+            <state line="24" column="57" selection-start="678" selection-end="678" vertical-scroll-proportion="0.39617488">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,7 +96,7 @@
       <file leaf-file-name="BankAccountDTO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BankAccountDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="32" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
+            <state line="12" column="43" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -113,7 +114,7 @@
       <file leaf-file-name="BankAccount.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BankAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="58" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
+            <state line="11" column="41" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -130,10 +131,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/TestBankAccount.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BankAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/BankAccountDAO.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestBankAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/BankAccountDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BankAccount.java" />
       </list>
     </option>
   </component>
@@ -301,6 +302,29 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="TestBankAccount.testOpenAccountWithBalanceIsZero" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Banking3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestBankAccount" />
+      <option name="METHOD_NAME" value="testOpenAccountWithBalanceIsZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -392,12 +416,14 @@
       <patterns />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JUnit.TestBankAccount" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestBankAccount.testOpenAccountWithBalanceIsZero" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="JUnit.TestBankAccount" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestBankAccount.testOpenAccountWithBalanceIsZero" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -436,7 +462,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -511,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BankAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="58" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BankAccountDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
@@ -527,14 +546,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BankAccountDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="32" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
+        <state line="12" column="43" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BankAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="41" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestBankAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="33" selection-start="579" selection-end="579" vertical-scroll-proportion="0.73497266">
+        <state line="24" column="57" selection-start="678" selection-end="678" vertical-scroll-proportion="0.39617488">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
