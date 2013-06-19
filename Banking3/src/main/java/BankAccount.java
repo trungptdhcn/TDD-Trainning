@@ -7,9 +7,10 @@
  */
 public class BankAccount {
     private static BankAccountDAO mockBankAccountDAO;
-    public static void openAccount(String accountNumber) {
+    public static BankAccountDTO openAccount(String accountNumber) {
         BankAccountDTO account = new BankAccountDTO(accountNumber);
         mockBankAccountDAO.save(account);
+        return account;
     }
 
     public static void setDAO(BankAccountDAO mockBankAccountDAO) {
@@ -20,5 +21,10 @@ public class BankAccount {
     public static BankAccountDTO getAccount(String accountNumber) {
         return mockBankAccountDAO.find(accountNumber);
         //To change body of created methods use File | Settings | File Templates.
+    }
+
+    public static void deposit(BankAccountDTO mAccountDTO,double amount,String description) {
+
+        mockBankAccountDAO.save(mAccountDTO);
     }
 }
