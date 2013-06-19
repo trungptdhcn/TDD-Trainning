@@ -16,4 +16,9 @@ public class BankAccount {
         //To change body of created methods use File | Settings | File Templates.
         BankAccount.mockBankAccountDAO = mockBankAccountDAO;
     }
+
+    public static BankAccountDTO getAccount(String accountNumber) {
+        return mockBankAccountDAO.find(accountNumber);
+        //To change body of created methods use File | Settings | File Templates.
+    }
 }
