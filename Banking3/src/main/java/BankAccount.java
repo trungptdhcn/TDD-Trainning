@@ -25,6 +25,7 @@ public class BankAccount {
 
     public static void deposit(BankAccountDTO mAccountDTO,double amount,String description) {
 
+        mAccountDTO.setBalance(mAccountDTO.getBalance()+amount);
         mockBankAccountDAO.save(mAccountDTO);
     }
 }
