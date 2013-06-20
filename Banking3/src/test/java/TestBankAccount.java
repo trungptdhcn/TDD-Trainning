@@ -77,7 +77,21 @@ public class TestBankAccount extends TestCase {
         List<TransactionDTO> transaction = new ArrayList<TransactionDTO>();
         BankAccount.getTransactionsOccurredOneTime(account.getNumberAccount(),1000L,1200L);
         when(BankAccount.getTransactionsOccurredOneTime(account.getNumberAccount(),1000L,1200L)).thenReturn(transaction);
-        verify(mockTransactionDAO).getOnTime("0123456789",1000L,1200L);
+        verify(mockTransactionDAO).getOnTime("0123456789", 1000L, 1200L);
+
+    }
+    public void testGetTransactionLastest()
+    {
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+        List<TransactionDTO>transaction = new ArrayList<TransactionDTO>();
+        BankAccount.getTransactionLastest(account.getNumberAccount(),9);
+        when(BankAccount.getTransactionLastest(account.getNumberAccount(),9)).thenReturn(transaction);
+        ArgumentCaptor<String> argumentCaptor = ArgumentCaptor.forClass(String.class);
+        ArgumentCaptor<Integer> integerArgumentCaptor = ArgumentCaptor.forClass(Integer.class);
+        verify(mockTransactionDAO).getLastest(argumentCaptor.capture(),integerArgumentCaptor.capture());
+
+        assertEquals(argumentCaptor.getValue(),"0123456789");
+        assertEquals(integerArgumentCaptor.getValue().intValue(),9);
 
     }
 

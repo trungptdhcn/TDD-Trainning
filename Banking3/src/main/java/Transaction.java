@@ -29,4 +29,8 @@ public class Transaction {
     public static List<TransactionDTO> getTransactionsOccurredOneTime(String numberAccount, long startime, long endTime) {
         return mockTransactionDAO.getOnTime(numberAccount,startime,endTime);
     }
+
+    public static List<TransactionDTO> getTransactionLastest(String numberAccount, int n) {
+        return mockTransactionDAO.getLastest(numberAccount,n);
+    }
 }

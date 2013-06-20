@@ -39,4 +39,8 @@ public class BankAccount {
     public static List<TransactionDTO> getTransactionsOccurredOneTime(String numberAccount, long startime, long endTime) {
         return Transaction.getTransactionsOccurredOneTime(numberAccount,startime,endTime);
     }
+
+    public static List<TransactionDTO> getTransactionLastest(String numberAccount, int n) {
+        return Transaction.getTransactionLastest(numberAccount,n);
+    }
 }
