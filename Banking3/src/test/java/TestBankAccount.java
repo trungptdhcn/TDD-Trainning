@@ -37,19 +37,23 @@ public class TestBankAccount extends TestCase {
         BankAccountDTO account = BankAccount.getAccount("0123456789");
         verify(mockBankAccountDAO).find("0123456789");
     }
-    public void testDepositAccountBalanceIncrementAmount()
+    public void testDoTransaction()
     {
-        BankAccountDTO mAccountDTO = BankAccount.openAccount("0123456789");
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+        BankAccount.doTransaction(account,100.0,"deposit");
 
-        BankAccount.deposit(mAccountDTO,100.0,"deposit");
 
-        ArgumentCaptor<BankAccountDTO> accountRecord = ArgumentCaptor.forClass(BankAccountDTO.class);
-        verify(mockBankAccountDAO,times(2)).save(accountRecord.capture());
-        List<BankAccountDTO> saveRecord = accountRecord.getAllValues();
+        ArgumentCaptor<BankAccountDTO> agument = ArgumentCaptor.forClass(BankAccountDTO.class);
+        verify(mockBankAccountDAO,times(2)).save(agument.capture());
+        List<BankAccountDTO> saveRecord = agument.getAllValues();
         assertEquals(saveRecord.get(1).getNumberAccount(),"0123456789");
-        assertEquals(saveRecord.get(1).getBalance(),100.0,0.01);
+        assertEquals(saveRecord.get(1).getBalance(),100.0);
 
+        BankAccount.doTransaction(account,-10.0,"withdraw");
+        verify(mockBankAccountDAO,times(3)).save(agument.capture());
+        List<BankAccountDTO> saveRecord2 = agument.getAllValues();
 
-
+        assertEquals(saveRecord.get(2).getNumberAccount(),"0123456789");
+        assertEquals(saveRecord.get(2).getBalance(),90.0);
     }
 }
