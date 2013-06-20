@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Trung
@@ -27,5 +29,10 @@ public class BankAccount {
         //To change body of created methods use File | Settings | File Templates.
         mAccountDTO.setBalance(mAccountDTO.getBalance()+amount);
         mockBankAccountDAO.save(mAccountDTO);
+    }
+
+
+    public static List<TransactionDTO> getTransactionOccurred(String numberAccount) {
+        return Transaction.getTransactionOccurred(numberAccount);
     }
 }

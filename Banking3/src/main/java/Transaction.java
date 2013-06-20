@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Trung
@@ -18,5 +20,9 @@ public class Transaction {
     }
     {
 
+    }
+
+    public static List<TransactionDTO> getTransactionOccurred(String numberAccount) {
+        return mockTransactionDAO.get(numberAccount);
     }
 }
