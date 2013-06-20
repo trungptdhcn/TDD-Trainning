@@ -15,4 +15,8 @@ public class TransactionDAO {
     public List<TransactionDTO> get(String numberAccount) {
         return null;  //To change body of created methods use File | Settings | File Templates.
     }
+
+    public List<TransactionDTO> getOnTime(String numberAccount, long startime, long endTime) {
+        return null;  //To change body of created methods use File | Settings | File Templates.
+    }
 }

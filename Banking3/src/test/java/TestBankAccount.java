@@ -3,6 +3,7 @@ import org.junit.Before;
 import org.mockito.ArgumentCaptor;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import static org.mockito.Mockito.*;
@@ -17,6 +18,7 @@ import static org.mockito.Mockito.*;
 public class TestBankAccount extends TestCase {
     private BankAccountDAO mockBankAccountDAO = mock(BankAccountDAO.class);
     private TransactionDAO mockTransactionDAO = mock(TransactionDAO.class);
+    private Calendar mockcalendar = mock(Calendar.class);
     @Before
     public void setUp()
     {
@@ -69,4 +71,14 @@ public class TestBankAccount extends TestCase {
          verify(mockTransactionDAO).get("0123456789");
 
     }
+    public void testGetTransactionsOccurredOneTime()
+    {
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+        List<TransactionDTO> transaction = new ArrayList<TransactionDTO>();
+        BankAccount.getTransactionsOccurredOneTime(account.getNumberAccount(),1000L,1200L);
+        when(BankAccount.getTransactionsOccurredOneTime(account.getNumberAccount(),1000L,1200L)).thenReturn(transaction);
+        verify(mockTransactionDAO).getOnTime("0123456789",1000L,1200L);
+
+    }
+
 }

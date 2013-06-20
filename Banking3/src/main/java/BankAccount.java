@@ -35,4 +35,8 @@ public class BankAccount {
     public static List<TransactionDTO> getTransactionOccurred(String numberAccount) {
         return Transaction.getTransactionOccurred(numberAccount);
     }
+
+    public static List<TransactionDTO> getTransactionsOccurredOneTime(String numberAccount, long startime, long endTime) {
+        return Transaction.getTransactionsOccurredOneTime(numberAccount,startime,endTime);
+    }
 }
