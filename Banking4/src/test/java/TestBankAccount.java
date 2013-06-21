@@ -45,6 +45,13 @@ public class TestBankAccount extends TestCase {
         assertEquals(saveRecord.get(1).getAccountNumber(),"0123456789");
         assertEquals(saveRecord.get(1).getBalance(),100.0,0.01);
 
+        BankAccount.doTransaction(account,-10.0,"withdraw");
+        //ArgumentCaptor<BankAccountDTO> saveagument2 = ArgumentCaptor.forClass(BankAccountDTO.class);
+        verify(mockBankAccountDAO,times(3)).save(saveagument.capture());
+        List<BankAccountDTO>saveRecord2 = saveagument.getAllValues();
+        assertEquals(saveRecord.get(2).getAccountNumber(),"0123456789");
+        assertEquals(saveRecord.get(2).getBalance(),90,0.01);
+
 
 
     }

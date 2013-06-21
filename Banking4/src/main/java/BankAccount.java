@@ -22,6 +22,7 @@ public class BankAccount {
     }
 
     public static void doTransaction(BankAccountDTO account, double amount, String description) {
-        //To change body of created methods use File | Settings | File Templates.
+        account.setBalance(account.getBalance()+amount);
+        mockBankAccountDAO.save(account);
     }
 }
