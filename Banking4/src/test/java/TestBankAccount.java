@@ -25,7 +25,7 @@ public class TestBankAccount extends TestCase {
         //Prepare
         BankAccountDTO account = BankAccount.openAccount("0123456789");
         assertEquals(account.getBalance(),0.0,0.01);
-        verify(mockBankAccountDAO).save("0123456789");
+        verify(mockBankAccountDAO).save(account);
 
     }
 }

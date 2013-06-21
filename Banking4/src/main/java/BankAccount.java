@@ -8,7 +8,9 @@
 public class BankAccount {
     private static BankAccountDAO mockBankAccountDAO;
     public static BankAccountDTO openAccount(String accountNumber) {
-        return null;  //To change body of created methods use File | Settings | File Templates.
+        BankAccountDTO account = new BankAccountDTO(accountNumber);
+        mockBankAccountDAO.save(account);
+        return  account;
     }
 
     public static void setDAO(BankAccountDAO mockBankAccountDAO) {
