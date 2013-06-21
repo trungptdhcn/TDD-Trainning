@@ -1,9 +1,7 @@
 import junit.framework.TestCase;
 import org.junit.Before;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.reset;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,6 +24,12 @@ public class TestBankAccount extends TestCase {
         BankAccountDTO account = BankAccount.openAccount("0123456789");
         assertEquals(account.getBalance(),0.0,0.01);
         verify(mockBankAccountDAO).save(account);
-
+    }
+    public void testGetAccount()
+    {
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+        BankAccount.getAccount("0123456789");
+        when(mockBankAccountDAO.find("0123456789")).thenReturn(account);
+        verify(mockBankAccountDAO).find("0123456789");
     }
 }
