@@ -51,8 +51,5 @@ public class TestBankAccount extends TestCase {
         List<BankAccountDTO>saveRecord2 = saveagument.getAllValues();
         assertEquals(saveRecord.get(2).getAccountNumber(),"0123456789");
         assertEquals(saveRecord.get(2).getBalance(),90,0.01);
-
-
-
     }
 }
