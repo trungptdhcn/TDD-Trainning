@@ -1,3 +1,4 @@
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -9,12 +10,16 @@ import java.util.List;
  */
 public class Transaction {
     private static TransactionDAO mockTransactionDAO;
-    public static void setDAO(TransactionDAO mockTransactionDAO) {
+    private static Calendar mockcalendar;
+
+    public static void setDAO(TransactionDAO mockTransactionDAO,Calendar mockcalendar) {
         //To change body of created methods use File | Settings | File Templates.
         Transaction.mockTransactionDAO= mockTransactionDAO;
+        Transaction.mockcalendar = mockcalendar;
     }
-    public static void createTransaction(String accountNumber,long timeStamp,double amount,String description)
+    public static void createTransaction(String accountNumber,double amount,String description)
     {
+        long timeStamp = Transaction.mockcalendar.getTimeInMillis();
         TransactionDTO transactionDTO = new TransactionDTO(accountNumber,timeStamp,amount,description);
         mockTransactionDAO.save(transactionDTO);
     }

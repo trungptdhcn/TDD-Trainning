@@ -25,7 +25,7 @@ public class TestBankAccount extends TestCase {
         reset(mockBankAccountDAO);
         reset(mockTransactionDAO);
         BankAccount.setDAO(mockBankAccountDAO);
-        Transaction.setDAO(mockTransactionDAO);
+        Transaction.setDAO(mockTransactionDAO,mockcalendar);
 
     }
     public void testOpenAccountWithBalanceIsZero()
