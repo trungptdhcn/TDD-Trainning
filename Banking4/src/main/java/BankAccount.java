@@ -20,4 +20,8 @@ public class BankAccount {
     public static BankAccountDTO getAccount(String accountNumber) {
         return mockBankAccountDAO.find(accountNumber);
     }
+
+    public static void doTransaction(BankAccountDTO account, double amount, String description) {
+        //To change body of created methods use File | Settings | File Templates.
+    }
 }
