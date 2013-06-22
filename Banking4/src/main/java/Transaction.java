@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Trung
@@ -7,12 +9,17 @@
  */
 public class Transaction {
     private static TransactionDAO mockTransactionDAO;
-    public static void setTransactionDAO(TransactionDAO mockTransactionDAO) {
+    private static Calendar mockcalendar;
+    public static void setTransactionDAO(TransactionDAO mockTransactionDAO,Calendar mockcalendar) {
         //To change body of created methods use File | Settings | File Templates.
         Transaction.mockTransactionDAO = mockTransactionDAO;
+        Transaction.mockcalendar = mockcalendar;
     }
 
     public static TransactionDTO createTransaction(String accountNumber, double amount, String description) {
-        return null;  //To change body of created methods use File | Settings | File Templates.
+        long timeStamp = mockcalendar.getTimeInMillis();
+        TransactionDTO transaction = new TransactionDTO(accountNumber,amount,timeStamp,description);
+        mockTransactionDAO.save(transaction);
+        return transaction;
     }
 }

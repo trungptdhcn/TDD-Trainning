@@ -2,6 +2,8 @@ import junit.framework.TestCase;
 import org.junit.Before;
 import org.mockito.ArgumentCaptor;
 
+import java.util.Calendar;
+
 import static org.mockito.Mockito.*;
 
 /**
@@ -13,16 +15,19 @@ import static org.mockito.Mockito.*;
  */
 public class TestTransaction extends TestCase {
     private TransactionDAO mockTransactionDAO = mock(TransactionDAO.class);
+    private Calendar mockcalendar = mock(Calendar.class);
+
     @Before
     public void setUp()
     {
         reset(mockTransactionDAO);
-        Transaction.setTransactionDAO(mockTransactionDAO);
+        Transaction.setTransactionDAO(mockTransactionDAO,mockcalendar);
     }
 
 
     public void testCreateTransactionWithTimeStamp()
     {
+        when(mockcalendar.getTimeInMillis()).thenReturn(1000L);
         //Prepare
         TransactionDTO transaction = Transaction.createTransaction("0123456789",100.0,"deposit");
         ArgumentCaptor<TransactionDTO> saveAgument = ArgumentCaptor.forClass(TransactionDTO.class);
