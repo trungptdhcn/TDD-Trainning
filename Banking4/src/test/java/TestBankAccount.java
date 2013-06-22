@@ -15,6 +15,7 @@ import static org.mockito.Mockito.*;
  */
 public class TestBankAccount extends TestCase {
     private BankAccountDAO mockBankAccountDAO = mock(BankAccountDAO.class);
+    private TransactionDAO mockTransactionDAO = mock(TransactionDAO.class);
     @Before
     public void setUp()
     {
@@ -56,6 +57,13 @@ public class TestBankAccount extends TestCase {
     {
         BankAccountDTO account = BankAccount.openAccount("0123456789");
         List<TransactionDTO> mList =  BankAccount.getTransactionsOccurred(account.getAccountNumber());
+        verify(mockTransactionDAO).get("0123456789");
 
+    }
+    public void testGetTransactionsOccurredONTIME()
+    {
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+        List<TransactionDTO> mlist = BankAccount.getTransactionsOccurredOnTime(account.getAccountNumber(),1000L,1200L);
+        verify(mockTransactionDAO).getOnTime("0123456789",1000L,1200L);
     }
 }

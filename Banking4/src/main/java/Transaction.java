@@ -27,4 +27,8 @@ public class Transaction {
     public static List<TransactionDTO> getTransactionsOccurred(String accountNumber) {
         return mockTransactionDAO.get(accountNumber);
     }
+
+    public static List<TransactionDTO> getTransactionsOccurredOnTime(String accountNumber, long startTime, long endTime) {
+        return mockTransactionDAO.getOnTime(accountNumber,startTime,endTime);
+    }
 }
