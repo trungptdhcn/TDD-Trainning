@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Trung
@@ -24,5 +26,9 @@ public class BankAccount {
     public static void doTransaction(BankAccountDTO account, double amount, String description) {
         account.setBalance(account.getBalance()+amount);
         mockBankAccountDAO.save(account);
+    }
+
+    public static List<TransactionDTO> getTransactionsOccurred(String accountNumber) {
+        return Transaction.getTransactionsOccurred(accountNumber);
     }
 }

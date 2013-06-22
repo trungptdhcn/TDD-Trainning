@@ -1,4 +1,5 @@
 import java.util.Calendar;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,5 +22,9 @@ public class Transaction {
         TransactionDTO transaction = new TransactionDTO(accountNumber,amount,timeStamp,description);
         mockTransactionDAO.save(transaction);
         return transaction;
+    }
+
+    public static List<TransactionDTO> getTransactionsOccurred(String accountNumber) {
+        return mockTransactionDAO.get(accountNumber);
     }
 }

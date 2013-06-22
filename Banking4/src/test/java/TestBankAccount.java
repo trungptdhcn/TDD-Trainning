@@ -52,4 +52,10 @@ public class TestBankAccount extends TestCase {
         assertEquals(saveRecord.get(2).getAccountNumber(),"0123456789");
         assertEquals(saveRecord.get(2).getBalance(),90,0.01);
     }
+    public void testGetTransactionsOccurred()
+    {
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+        List<TransactionDTO> mList =  BankAccount.getTransactionsOccurred(account.getAccountNumber());
+
+    }
 }
