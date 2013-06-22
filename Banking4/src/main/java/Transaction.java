@@ -16,6 +16,12 @@ public class Transaction {
         Transaction.mockTransactionDAO = mockTransactionDAO;
         Transaction.mockcalendar = mockcalendar;
     }
+    public static void setTransactionDAO(TransactionDAO mockTransactionDAO) {
+        //To change body of created methods use File | Settings | File Templates.
+        Transaction.mockTransactionDAO = mockTransactionDAO;
+        //Transaction.mockcalendar = mockcalendar;
+    }
+
 
     public static TransactionDTO createTransaction(String accountNumber, double amount, String description) {
         long timeStamp = mockcalendar.getTimeInMillis();
@@ -29,6 +35,10 @@ public class Transaction {
     }
 
     public static List<TransactionDTO> getTransactionsOccurredOnTime(String accountNumber, long startTime, long endTime) {
-        return mockTransactionDAO.getOnTime(accountNumber,startTime,endTime);
+        return mockTransactionDAO.getOnTime(accountNumber, startTime, endTime);
+    }
+
+    public static List<TransactionDTO> getLastestTransaction(String accountNumber, int number) {
+        return mockTransactionDAO.getLastestTransaction(accountNumber,number);
     }
 }

@@ -21,6 +21,7 @@ public class TestBankAccount extends TestCase {
     {
         reset(mockBankAccountDAO);
         BankAccount.setDAO(mockBankAccountDAO);
+        Transaction.setTransactionDAO(mockTransactionDAO);
     }
     public void testOpenAccountWithBalanceIsZero()
     {
@@ -65,5 +66,11 @@ public class TestBankAccount extends TestCase {
         BankAccountDTO account = BankAccount.openAccount("0123456789");
         List<TransactionDTO> mlist = BankAccount.getTransactionsOccurredOnTime(account.getAccountNumber(),1000L,1200L);
         verify(mockTransactionDAO).getOnTime("0123456789",1000L,1200L);
+    }
+    public void testGetLastestTransaction()
+    {
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+        List<TransactionDTO> mList = BankAccount.getLastestTransaction(account.getAccountNumber(),9);
+        verify(mockTransactionDAO).getLastestTransaction("0123456789",9);
     }
 }
