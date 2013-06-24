@@ -28,4 +28,10 @@ public class TestBankAccount extends TestCase {
         verify(mockBankAccountDAO).save(account);
 
     }
+    public void testGetAccount()
+    {
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+        BankAccount.getAccount(account.getAccountNumber());
+        verify(mockBankAccountDAO).find(account.getAccountNumber());
+    }
 }

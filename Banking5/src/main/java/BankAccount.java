@@ -17,4 +17,8 @@ public class BankAccount {
     public static void setDAO(BankAccountDAO mockBankAccountDAO) {
         BankAccount.mockBankAccountDAO = mockBankAccountDAO;
     }
+
+    public static void getAccount(String accountNumber) {
+        mockBankAccountDAO.find(accountNumber);
+    }
 }
