@@ -1,4 +1,9 @@
 import junit.framework.TestCase;
+import org.junit.Before;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.reset;
+import static org.mockito.Mockito.verify;
 
 /**
  * Created with IntelliJ IDEA.
@@ -8,11 +13,19 @@ import junit.framework.TestCase;
  * To change this template use File | Settings | File Templates.
  */
 public class TestBankAccount extends TestCase {
-        public void testOpenAccountwithBalanceisZero()
-        {
-            //preparing
-            BankAccountDTO account = BankAccount.openAccount("0123456789");
-            assertEquals(account.getBalance(),0.0,0.01);
+    private BankAccountDAO mockBankAccountDAO = mock(BankAccountDAO.class);
 
-        }
+    @Before
+    public void setUp()
+    {
+        reset(mockBankAccountDAO);
+        BankAccount.setDAO(mockBankAccountDAO);
+    }
+    public void testOpenAccountwithBalanceisZero() {
+        //preparing
+        BankAccountDTO account = BankAccount.openAccount("0123456789");
+        assertEquals(account.getBalance(), 0.0, 0.01);
+        verify(mockBankAccountDAO).save(account);
+
+    }
 }
