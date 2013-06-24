@@ -21,4 +21,9 @@ public class BankAccount {
     public static void getAccount(String accountNumber) {
         mockBankAccountDAO.find(accountNumber);
     }
+
+    public static void doTransaction(BankAccountDTO account, double amount, String description) {
+        account.setBalance(account.getBalance()+amount);
+        mockBankAccountDAO.save(account);
+    }
 }
