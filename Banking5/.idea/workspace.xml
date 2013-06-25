@@ -8,6 +8,41 @@
     <file path="/BankAccount.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372056688596" ignored="false" />
     <file path="/BankAccountDAO.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372056307031" ignored="false" />
     <file path="/BankAccountDTO.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372056120387" ignored="false" />
+    <file path="/TestTransaction.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372136350425" ignored="false" />
+    <file path="/Transaction.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372135879914" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-1/pom.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372125499141" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-1/.idea/compiler.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372125613186" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-1/.idea/workspace.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372125664118" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-1/.idea/misc.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372125499141" ignored="false" />
+    <file path="/fragment.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372135832710" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-1/Spring-1.iml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372123772096" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-1/src/main/webapp/WEB-INF/web.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372123746767" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-1/src/main/java/Qsoft/com/Spring/Animal.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372124342839" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-1/src/main/java/Qsoft/com/Spring/Cat.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372124372577" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-1/src/main/java/Qsoft/com/Spring/Dog.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372124674087" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-1/src/main/java/Qsoft/com/Spring/House.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372124728127" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-1/src/main/java/Qsoft/com/Spring/FarmTest.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372125437931" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-1/src/main/java/beans.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372124293285" ignored="false" />
+    <file path="/beans.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372126370552" ignored="false" />
+    <file path="/Animal.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372126045657" ignored="false" />
+    <file path="/Cat.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372126102515" ignored="false" />
+    <file path="/Dog.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372126066136" ignored="false" />
+    <file path="/House.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372126159158" ignored="false" />
+    <file path="/FarmTest.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372126904174" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-2/pom.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372125880640" ignored="false" />
+    <file path="/pom.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372125736185" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-2/src/main/java/spring-config.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372125928582" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-2/src/beans.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372125952406" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-2/src/main/java/Qsoft/Trung/SpringTest/Animal.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372126048519" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-2/.idea/misc.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372126037398" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-2/.idea/workspace.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372136295810" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-2/src/main/java/Qsoft/Trung/SpringTest/Dog.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372126073617" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-2/src/main/java/Qsoft/Trung/SpringTest/Cat.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372126111101" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-2/src/main/java/Qsoft/Trung/SpringTest/House.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372126171407" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-2/src/main/java/Qsoft/Trung/SpringTest/FarmTest.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372126904174" ignored="false" />
+    <file path="$PROJECT_DIR$/../Spring-2/src/main/java/beans.xml" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372126372732" ignored="false" />
+    <file path="/TransactionDTO.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372135757584" ignored="false" />
+    <file path="/TransactionDAO.java" changelist="b9e18b45-337e-40bf-aa05-7c71f6d5699c" time="1372135818337" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,13 +110,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestBankAccount.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TestBankAccount.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestBankAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="33" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.30327868">
+            <state line="49" column="5" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestTransaction.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestTransaction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="63" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.47826087">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transaction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Transaction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="74" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionDTO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TransactionDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="32" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TransactionDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="8" selection-start="243" selection-end="316" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,8 +199,12 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/BankAccountDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/BankAccountDAO.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestBankAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/BankAccount.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestBankAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TransactionDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TransactionDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestTransaction.java" />
       </list>
     </option>
   </component>
@@ -261,7 +338,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.TestBankAccount">
+  <component name="RunManager" selected="JUnit.TestTransaction">
     <configuration default="false" name="TestBankAccount" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Banking5" />
@@ -269,6 +346,29 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestBankAccount" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestTransaction" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Banking5" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestTransaction" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -376,12 +476,14 @@
       <patterns />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JUnit.TestBankAccount" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestTransaction" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestBankAccount" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestTransaction" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestBankAccount" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -518,7 +620,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestBankAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="33" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.30327868">
+        <state line="49" column="5" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TransactionDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="32" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TransactionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="8" selection-start="243" selection-end="316" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="74" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="63" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.47826087">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

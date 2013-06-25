@@ -47,6 +47,5 @@ public class TestBankAccount extends TestCase {
         assertEquals(save.get(1).getAccountNumber(),"0123456789");
         assertEquals(save.get(1).getBalance(),100.0,0.01);
 
-
     }
 }
