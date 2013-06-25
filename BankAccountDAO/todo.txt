@@ -1,0 +1,6 @@
+// Test method save BankAccountDAO
+- Khi t?o m?t tài kho?n m?i v?i accountNumber s? có balance = 0 ðý?c lýu trong CSDL
+- Khi t?o m?t tài kho?n m?i v?i accountNumber ð? t?n t?i s? return ra m?t c?nh báo là account ð? t?n t?i
+- Khi m?t account deposit th? balance c?a account s? tãng m?t lý?ng amount c?n description s? lýu l?i trong CSDL là deposit
+- Khi m?t account withdraw th? banlance c?a account s? gi?m m?t lý?ng amount c?n description s? lýu l?i trong CSDL là withdraw
+- Khi m?t account withdraw ho?c deposit amount = 0 th? s? b?n ra m?t exception
