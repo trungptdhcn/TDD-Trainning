@@ -18,4 +18,8 @@ public class TransactionDAO {
     public List<TransactionDTO> findOneTime(String accountNumber, long startTime, long endTime) {
         return null;  //To change body of created methods use File | Settings | File Templates.
     }
+
+    public List<TransactionDTO> findLastest(String accountNumber, int m) {
+        return null;  //To change body of created methods use File | Settings | File Templates.
+    }
 }

@@ -40,6 +40,10 @@ public class BankAccount {
     }
 
     public static List<TransactionDTO> getTransactionsOccurredOntime(String accountNumber, long startTime, long endTime) {
-        return Transaction.getTransactionsOccurredOnTime(accountNumber,startTime,endTime);
+        return Transaction.getTransactionsOccurredOnTime(accountNumber, startTime, endTime);
+    }
+
+    public static List<TransactionDTO> getTransactionsOccurredLastest(String accountNumber, int m) {
+        return Transaction.getTransactionsOccurredLastest(accountNumber,m);
     }
 }

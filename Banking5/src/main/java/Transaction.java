@@ -28,8 +28,11 @@ public class Transaction {
     }
 
     public static List<TransactionDTO> getTransactionsOccurredOnTime(String accountNumber, long startTime, long endTime) {
-        return mockTransactionDAO.findOneTime(accountNumber,startTime,endTime);
+        return mockTransactionDAO.findOneTime(accountNumber, startTime, endTime);
     }
 
 
+    public static List<TransactionDTO> getTransactionsOccurredLastest(String accountNumber, int m) {
+        return mockTransactionDAO.findLastest(accountNumber,m);
+    }
 }
