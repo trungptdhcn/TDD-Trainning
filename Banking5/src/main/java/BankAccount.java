@@ -39,4 +39,7 @@ public class BankAccount {
         BankAccount.mockTransactionDAO = mockTransactionDAO;
     }
 
+    public static List<TransactionDTO> getTransactionsOccurredOntime(String accountNumber, long startTime, long endTime) {
+        return Transaction.getTransactionsOccurredOnTime(accountNumber,startTime,endTime);
+    }
 }

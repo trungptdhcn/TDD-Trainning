@@ -58,4 +58,10 @@ public class TestBankAccount extends TestCase {
         verify(mockTransactionDAO).find("0123456789");
 
     }
+    public void testGetTransactionsOccurredOntime()
+    {
+        List<TransactionDTO>listTransaction = new ArrayList<TransactionDTO>();
+        when(BankAccount.getTransactionsOccurredOntime("0123456789",1000L,1200L)).thenReturn(listTransaction);
+        verify(mockTransactionDAO).findOneTime("0123456789",1000L,1200L);
+    }
 }
