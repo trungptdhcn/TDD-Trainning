@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Trung
@@ -7,6 +9,7 @@
  */
 public class BankAccount {
     private static BankAccountDAO mockBankAccountDAO;
+    private static TransactionDAO mockTransactionDAO;
 
     public static BankAccountDTO openAccount(String accountNumber) {
         BankAccountDTO account = new BankAccountDTO(accountNumber);
@@ -26,4 +29,14 @@ public class BankAccount {
         account.setBalance(account.getBalance()+amount);
         mockBankAccountDAO.save(account);
     }
+
+    public static List<TransactionDTO> getTransactionsOccurred(String accountNumber) {
+        return Transaction.getTransactionsOccurred(accountNumber);
+    }
+
+    public static void setDAO(TransactionDAO mockTransactionDAO)
+    {
+        BankAccount.mockTransactionDAO = mockTransactionDAO;
+    }
+
 }
