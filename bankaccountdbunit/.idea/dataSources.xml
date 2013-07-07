@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1752453971">
+    <data-source source="LOCAL" name="dataSource" product="PostgreSQL" version="9.2.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.0 JDBC4 (build 801)" uuid="baaea965-f990-4068-8249-c5e073b45358">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/dbcatalog</jdbc-url>
+      <user-name>dbc_user</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries>
+        <library>
+          <url>jar://$MAVEN_REPOSITORY$/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.jar!/</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+
