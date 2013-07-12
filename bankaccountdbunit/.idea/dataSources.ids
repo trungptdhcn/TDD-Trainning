@@ -2302,13 +2302,36 @@
       <column name="viewowner" sqlType="name" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
       <column name="definition" sqlType="text" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
     </table>
-    <table name="bankaccount" schema="public" catalog="dbcatalog" type="TABLE">
-      <column name="id" sqlType="bigserial" length="19" precision="0" nullable="false" jdbcType="-5" def="bmV4dHZhbCgnYmFua2FjY291bnRfaWRfc3EnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
-      <column name="numberaccount" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="balance" sqlType="float8" length="17" precision="17" nullable="true" jdbcType="8"/>
-      <primary-key name="bankaccount_pkey" columns="id"/>
+    <table name="city" schema="public" catalog="dbcatalog" type="TABLE">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="city_pkey" columns="id"/>
     </table>
-    <table name="bankaccount_id_sq" schema="public" catalog="dbcatalog" type="SEQUENCE">
+    <table name="dealer" schema="public" catalog="dbcatalog" type="TABLE">
+      <column name="id" sqlType="bigserial" length="19" precision="0" nullable="false" jdbcType="-5" def="bmV4dHZhbCgnZGVhbGVyX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" length="50" precision="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="text" length="2147483647" precision="0" nullable="false" jdbcType="12"/>
+      <column name="active" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="address" sqlType="varchar" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="phonenum" sqlType="varchar" length="15" precision="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="varchar" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="website" sqlType="varchar" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="phone_number" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="dealer_pkey" columns="id"/>
+    </table>
+    <table name="dealer_id_seq" schema="public" catalog="dbcatalog" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="dealer_id_sq" schema="public" catalog="dbcatalog" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
@@ -2321,12 +2344,12 @@
       <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7"/>
     </table>
     <table name="model" schema="public" catalog="dbcatalog" type="TABLE">
-      <column name="id" sqlType="serial" length="10" precision="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnbW9kZWxfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="id" sqlType="bigserial" length="19" precision="0" nullable="false" jdbcType="-5" def="bmV4dHZhbCgnbW9kZWxfaWRfc3EnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
       <column name="name" sqlType="varchar" length="50" precision="0" nullable="true" jdbcType="12"/>
       <column name="description" sqlType="text" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
       <primary-key name="model_pkey" columns="id"/>
     </table>
-    <table name="model_id_seq" schema="public" catalog="dbcatalog" type="SEQUENCE">
+    <table name="model_id_sq" schema="public" catalog="dbcatalog" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
@@ -18543,5 +18566,15 @@
         <parameter name="$3" sqlType="_text" length="0" precision="0" nullable="true" jdbcType="2003" type="" index="-1"/>
       </prototype>
     </procedure>
+  </data-source>
+  <data-source source="LOCAL" name="dataSourceTest" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="4ab150ad-d652-452e-9a36-8dfda30d2b70">
+    <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+    <jdbc-url>jdbc:h2:mem:test;DB_CLOSE_DELAY=-1</jdbc-url>
+    <user-name>dbc_user</user-name>
+    <libraries>
+      <library>
+        <url>jar://$MAVEN_REPOSITORY$/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.jar!/</url>
+      </library>
+    </libraries>
   </data-source>
 </component>

@@ -36,12 +36,14 @@ import javax.sql.DataSource;
 public class TestBankAccountDAO {
     @PersistenceContext
     private EntityManager entityManager;
+
     @Autowired
     private BankAccountDAO bankAccountDAO;
 
     @Autowired
     private DataSource dataSourceTest;
 
+    @Autowired
     private IDatabaseTester databaseTester;
     @Before
     public void setup() throws Exception
@@ -84,7 +86,13 @@ public class TestBankAccountDAO {
         BankAccountEntity bankAccountEntity = bankAccountDAO.find("02145645");
         Assert.assertEquals(bankAccountEntity,null);
     }
-    @Test
-    public void test
+//    @Test
+//    public void testSaveAccountNotEmptyinDatabases()
+//    {
+//        BankAccountEntity bankAccountsave = new BankAccountEntity("09020546");
+//        bankAccountDAO.save(bankAccountsave);
+//        BankAccountEntity testBankAccount = bankAccountDAO.find("09020546");
+//        Assert.assertEquals(testBankAccount,bankAccountsave);
+//    }
 
 }

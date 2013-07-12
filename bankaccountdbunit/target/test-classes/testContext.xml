@@ -12,6 +12,9 @@
        default-autowire="byName">
     <context:annotation-config />
     <import resource="applicationContext.xml"/>
+    <bean name="databaseTester" class="org.dbunit.DataSourceDatabaseTester">
+        <constructor-arg ref="dataSource" />
+    </bean>
     <bean id="placeholderConfig"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="classpath:dbTest.properties"/>
@@ -32,7 +35,7 @@
         <property name="password" value="${db.password}"/>
     </bean>
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-    <property name="dataSource" ref="dataSource"></property>
+    <property name="dataSource" ref="dataSourceTest"></property>
     </bean>
     <context:component-scan base-package="com.qsoft.bankaccountdao"/>
 </beans>

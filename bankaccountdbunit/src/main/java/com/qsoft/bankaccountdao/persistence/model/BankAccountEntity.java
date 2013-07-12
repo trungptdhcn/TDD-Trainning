@@ -11,8 +11,9 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name ="bankaccount")
+@SequenceGenerator(name = "bankaccount_id_sq", sequenceName = "bankaccount_id_sq", initialValue = 1, allocationSize = 1)
 public class BankAccountEntity {
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "bankaccount_id_sq")
     @Id
     @Column(name="numberaccount")
     private String accountNumber;
@@ -39,5 +40,23 @@ public class BankAccountEntity {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return this.accountNumber.hashCode();    //To change body of overridden methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        boolean result = false;
+        if(obj instanceof BankAccountEntity)
+        {
+            BankAccountEntity bankAccountEntity = (BankAccountEntity)obj;
+            result = (this.getAccountNumber()==bankAccountEntity.getAccountNumber() && this.getBalance() == bankAccountEntity.getBalance());
+        }
+        return result;
     }
 }
