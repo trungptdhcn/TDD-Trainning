@@ -15,7 +15,9 @@ import javax.persistence.*;
 public class BankAccountEntity {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "bankaccount_id_sq")
     @Id
-    @Column(name="numberaccount")
+    @Column(name="id")
+    private Long id;
+    @Column(name = "numberaccount")
     private String accountNumber;
     @Column(name="balance")
     private double balance;
@@ -40,6 +42,16 @@ public class BankAccountEntity {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    public Long getId()
+    {
+        return id;
+    }
+
+    public void setId(Long id)
+    {
+        this.id = id;
     }
 
     @Override

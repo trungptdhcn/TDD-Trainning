@@ -43,7 +43,6 @@ public class TestBankAccountDAO {
     @Autowired
     private DataSource dataSourceTest;
 
-    @Autowired
     private IDatabaseTester databaseTester;
     @Before
     public void setup() throws Exception
@@ -67,12 +66,6 @@ public class TestBankAccountDAO {
     {
         databaseTester.onTearDown();
     }
-
-
-    public void testSaveBankAccount()
-    {
-
-    }
     @Test
     public void testGetAccount()throws Exception
     {
@@ -86,13 +79,25 @@ public class TestBankAccountDAO {
         BankAccountEntity bankAccountEntity = bankAccountDAO.find("02145645");
         Assert.assertEquals(bankAccountEntity,null);
     }
-//    @Test
-//    public void testSaveAccountNotEmptyinDatabases()
-//    {
-//        BankAccountEntity bankAccountsave = new BankAccountEntity("09020546");
-//        bankAccountDAO.save(bankAccountsave);
-//        BankAccountEntity testBankAccount = bankAccountDAO.find("09020546");
-//        Assert.assertEquals(testBankAccount,bankAccountsave);
-//    }
+    @Test
+    public void testSaveAccountNotEmptyinDatabases()
+    {
+        BankAccountEntity bankAccountsave = new BankAccountEntity("09020546");
+        bankAccountDAO.save(bankAccountsave);
+
+        BankAccountEntity testBankAccount = bankAccountDAO.find("09020546");
+        Assert.assertEquals(testBankAccount,bankAccountsave);
+    }
+    @Test
+    public void testSaveAccountExistsDatabases()
+    {
+        BankAccountEntity bankAccountEntity = bankAccountDAO.find("0123456789");
+        bankAccountEntity.setBalance(1000);
+        bankAccountDAO.save(bankAccountEntity);
+        BankAccountEntity bankAccountEntity1test = bankAccountDAO.find("0123456789");
+
+        Assert.assertEquals(1000.0,bankAccountEntity1test.getBalance());
+
+    }
 
 }

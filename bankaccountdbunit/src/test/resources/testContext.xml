@@ -12,13 +12,13 @@
        default-autowire="byName">
     <context:annotation-config />
     <import resource="applicationContext.xml"/>
-    <bean name="databaseTester" class="org.dbunit.DataSourceDatabaseTester">
-        <constructor-arg ref="dataSource" />
-    </bean>
-    <bean id="placeholderConfig"
-          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:dbTest.properties"/>
-    </bean>
+    <!--<bean name="databaseTester" class="org.dbunit.DataSourceDatabaseTester">-->
+        <!--<constructor-arg ref="dataSource" />-->
+    <!--</bean>-->
+    <!--<bean id="placeholderConfig"-->
+          <!--class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+        <!--<property name="location" value="classpath:dbTest.properties"/>-->
+    <!--</bean>-->
     <bean id="entityManagerFactory"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <!--p:dataSource-ref="dataSource">-->
@@ -28,11 +28,11 @@
         <property name="persistenceXmlLocation" value="META-INF/persistenceTest.xml"/>
     </bean>
     <bean id="dataSourceTest" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="${db.driver}"/>
+        <property name="driverClassName" value="org.h2.Driver"/>
         <!--using postgres driver-->
-        <property name="url" value="${db.url}"/>
-        <property name="username" value="${db.username}"/>
-        <property name="password" value="${db.password}"/>
+        <property name="url" value="jdbc:h2:mem:test;DB_CLOSE_DELAY=-1"/>
+        <property name="username" value="sa"/>
+        <property name="password" value=""/>
     </bean>
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
     <property name="dataSource" ref="dataSourceTest"></property>

@@ -24,7 +24,15 @@ public class BankAccountDAOImpl implements BankAccountDAO {
 
     @Override
     public void save(BankAccountEntity account) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        if (account.getId()!=null)
+        {
+            entityManager.merge(account);
+        }else
+        {
+            entityManager.persist(account);
+        }
+
+        entityManager.flush();
     }
 
     @Override
@@ -37,8 +45,6 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             return null;
         }
         else
-        {
             return list.get(0);
-        }
     }
 }
