@@ -23,9 +23,10 @@ public class BankAccountDAOImpl implements BankAccountDAO {
 
 
     @Override
-    public void save(BankAccountEntity account) {
+    public void save(BankAccountEntity account) throws Exception{
         if (account.getId()!=null)
         {
+            if(account.getBalance()<0) throw new Exception("a");
             entityManager.merge(account);
         }else
         {

@@ -2,6 +2,7 @@ package com.qsoft.bankaccountdao.persistence.dao.impl;
 
 import com.qsoft.bankaccountdao.persistence.dao.TransactionDAO;
 import com.qsoft.bankaccountdao.persistence.model.TransactionEntity;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * Time: 15:48
  * To change this template use File | Settings | File Templates.
  */
+@Transactional
 public class TransactionDAOImpl implements TransactionDAO {
     @Override
     public void save(TransactionEntity transaction) {

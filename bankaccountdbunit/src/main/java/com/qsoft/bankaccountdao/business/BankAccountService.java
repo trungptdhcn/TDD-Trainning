@@ -16,9 +16,9 @@ import java.util.List;
  */
 public interface BankAccountService {
     public void setDAO(BankAccountDAO mockBankAccountDAO,TransactionDAO mockTransactionDAO);
-    public BankAccountEntity openAccount(String accountNumber);
+    public BankAccountEntity openAccount(String accountNumber) throws Exception;
     public  void getAccount(String accountNumber);
-    public  void doTransaction(BankAccountEntity account, double amount, String description);
+    public  void doTransaction(BankAccountEntity account, double amount, String description) throws Exception;
     public List<TransactionEntity> getTransactionsOccurred(String accountNumber);
     public List<TransactionEntity> getTransactionsOccurredOntime(String accountNumber, long startTime, long endTime);
     public List<TransactionEntity> getTransactionsOccurredLastest(String accountNumber, int m);

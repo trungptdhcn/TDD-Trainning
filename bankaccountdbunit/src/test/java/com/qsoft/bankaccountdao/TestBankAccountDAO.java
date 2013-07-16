@@ -22,6 +22,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.sql.DataSource;
 
+import static junit.framework.Assert.fail;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Trung
@@ -80,7 +82,7 @@ public class TestBankAccountDAO {
         Assert.assertEquals(bankAccountEntity,null);
     }
     @Test
-    public void testSaveAccountNotEmptyinDatabases()
+    public void testSaveAccountNotEmptyinDatabases() throws Exception
     {
         BankAccountEntity bankAccountsave = new BankAccountEntity("09020546");
         bankAccountDAO.save(bankAccountsave);
@@ -89,7 +91,7 @@ public class TestBankAccountDAO {
         Assert.assertEquals(testBankAccount,bankAccountsave);
     }
     @Test
-    public void testSaveAccountExistsDatabases()
+    public void testSaveAccountExistsDatabases() throws Exception
     {
         BankAccountEntity bankAccountEntity = bankAccountDAO.find("0123456789");
         bankAccountEntity.setBalance(1000);
@@ -99,5 +101,17 @@ public class TestBankAccountDAO {
         Assert.assertEquals(1000.0,bankAccountEntity1test.getBalance());
 
     }
-
+    @Test
+    public void testSaveAccountWithNegativeBalance() throws Exception
+    {
+        BankAccountEntity bankAccountEntity = bankAccountDAO.find("0123456789");
+        bankAccountEntity.setBalance(-100);
+        try{
+        bankAccountDAO.save(bankAccountEntity);
+        fail();
+        }catch(Exception e)
+        {
+            Assert.assertEquals("a",e.getMessage());
+        }
+    }
 }

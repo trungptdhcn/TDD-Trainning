@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset>
     <bankaccount  numberaccount="0123456789" balance="100"/>
+    <transaction  timestamp = "1000" numberaccount="0123456789" description="deposit" amount="100"/>
     <!--<bankaccount numberaccount="09020546" balance="100"/>-->
 </dataset>

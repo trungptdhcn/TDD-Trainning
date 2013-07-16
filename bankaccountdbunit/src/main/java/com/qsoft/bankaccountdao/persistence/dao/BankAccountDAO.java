@@ -10,7 +10,7 @@ import com.qsoft.bankaccountdao.persistence.model.BankAccountEntity;
  * To change this template use File | Settings | File Templates.
  */
 public interface BankAccountDAO {
-    public void save(BankAccountEntity account);
+    public void save(BankAccountEntity account) throws Exception;
 
     public BankAccountEntity find(String accountNumber);
 }

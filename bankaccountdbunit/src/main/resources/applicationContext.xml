@@ -11,6 +11,7 @@
        http://www.springframework.org/schema/cache/spring-cache.xsd">
     <context:annotation-config />
     <bean id="bankaccountDAO" class="com.qsoft.bankaccountdao.persistence.dao.impl.BankAccountDAOImpl"/>
+    <bean id="transactionDAO" class="com.qsoft.bankaccountdao.persistence.dao.impl.TransactionDAOImpl"/>
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="packagesToScan" value="com.qsoft.bankaccountdao"></property>

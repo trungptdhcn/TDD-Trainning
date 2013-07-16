@@ -27,7 +27,7 @@ public class BankAccountServiceImpl implements BankAccountService {
     }
 
     @Override
-    public BankAccountEntity openAccount(String accountNumber) {
+    public BankAccountEntity openAccount(String accountNumber) throws Exception{
         BankAccountEntity account = new BankAccountEntity(accountNumber);
         mockBankAccountDAO.save(account);
         return account;
@@ -39,7 +39,7 @@ public class BankAccountServiceImpl implements BankAccountService {
     }
 
     @Override
-    public void doTransaction(BankAccountEntity account, double amount, String description) {
+    public void doTransaction(BankAccountEntity account, double amount, String description)throws Exception{
         account.setBalance(account.getBalance()+amount);
         mockBankAccountDAO.save(account);
     }

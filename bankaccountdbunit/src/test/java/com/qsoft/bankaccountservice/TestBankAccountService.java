@@ -31,14 +31,15 @@ public class TestBankAccountService extends TestCase{
         bankAccountService.setDAO(mockBankAccountDAO, mockTransactionDAO);
         //BankAccount.setDAO(mockTransactionDAO);
     }
-    public void testOpenAccountwithBalanceisZero() {
+    public void testOpenAccountwithBalanceisZero() throws Exception
+    {
         //preparing
         BankAccountEntity account = bankAccountService.openAccount("0123456789");
         assertEquals(account.getBalance(), 0.0, 0.01);
         verify(mockBankAccountDAO).save(account);
 
     }
-    public void testGetAccount()
+    public void testGetAccount() throws Exception
     {
         BankAccountEntity account = bankAccountService.openAccount("0123456789");
         bankAccountService.getAccount(account.getAccountNumber());
