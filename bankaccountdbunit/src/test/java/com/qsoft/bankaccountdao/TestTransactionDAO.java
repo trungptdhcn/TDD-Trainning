@@ -21,6 +21,8 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.sql.DataSource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -33,7 +35,8 @@ import javax.sql.DataSource;
 @ContextConfiguration(locations = {"classpath:testContext.xml"})
 @TransactionConfiguration(defaultRollback = true)
 @Transactional
-public class TestTransactionDAO {
+public class TestTransactionDAO
+{
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -50,35 +53,51 @@ public class TestTransactionDAO {
         cleanlyInsert(dataSet);
 
     }
-    private IDataSet readDataset()throws Exception
+
+    private IDataSet readDataset() throws Exception
     {
         return new FlatXmlDataSetBuilder().build(System.class.getResource("/dataset.xml"));
     }
-    private void cleanlyInsert(IDataSet iDataSet)throws Exception
+
+    private void cleanlyInsert(IDataSet iDataSet) throws Exception
     {
         databaseTester = new DataSourceDatabaseTester(dataSourceTest);
         databaseTester.setSetUpOperation(DatabaseOperation.CLEAN_INSERT);
         databaseTester.setDataSet(iDataSet);
         databaseTester.onSetup();
     }
+
     @After
     public void tearDown() throws Exception
     {
         databaseTester.onTearDown();
     }
+
     @Test
     public void testFindTransactionInDatabase()
     {
-        TransactionEntity transactionEntity = new TransactionEntity(1000L,"0123456789","deposit",100);
-        TransactionEntity testTransactionEntity1 = transactionDAO.find("0123456789");
-        Assert.assertEquals();
+        List<TransactionEntity> transactionEntityList = new ArrayList<TransactionEntity>();
+        TransactionEntity transactionEntity = new TransactionEntity(1000L, "0123456789", "deposit", 100);
+        transactionEntityList.add(transactionEntity);
+        List<TransactionEntity> testTransactionEntitylist = transactionDAO.find("0123456789");
+        Assert.assertEquals(testTransactionEntitylist.size(), transactionEntityList.size());
+        Assert.assertEquals(testTransactionEntitylist.get(0).getAmount(), transactionEntityList.get(0).getAmount());
     }
+
     @Test
     public void testSaveTransaction()
     {
-//        TransactionEntity transactionEntity = new TransactionEntity(1000L,"0123456789","deposit",100);
-//        transactionDAO.save(transactionEntity);
-//        TransactionEntity transactionEntity1 =
+        TransactionEntity transactionEntity = new TransactionEntity(1000L, "0123456789", "deposit", 100);
+        transactionDAO.save(transactionEntity);
+        TransactionEntity transactionEntity1 = transactionDAO.find(transactionEntity);
+    }
+
+    @Test
+    public void testGetTransactionOnTime()
+    {
+        List<TransactionEntity> transactionEntityList = new ArrayList<TransactionEntity>();
+        transactionEntityList = transactionDAO.findOneTime("0123456789",1000L,1200L);
+        Assert.assertEquals(2,transactionEntityList.size());
     }
 
 }

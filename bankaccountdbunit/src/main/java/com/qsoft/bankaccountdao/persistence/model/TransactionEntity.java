@@ -78,6 +78,16 @@ public class TransactionEntity {
         this.amount = amount;
     }
 
+    public int getId()
+    {
+        return id;
+    }
+
+    public void setId(int id)
+    {
+        this.id = id;
+    }
+
     @Override
     public boolean equals(Object obj)
     {
