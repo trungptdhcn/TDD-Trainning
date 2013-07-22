@@ -4,7 +4,7 @@
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset1" name="XML Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-config.xml</file>
           <file>file://$MODULE_DIR$/src/test/resources/testContext.xml</file>
         </fileset>
       </configuration>
@@ -12,12 +12,11 @@
     <facet type="jpa" name="JPA">
       <configuration>
         <setting name="validation-enabled" value="true" />
-        <setting name="provider-name" value="Hibernate" />
+        <setting name="provider-name" value="" />
         <datasource-mapping>
-          <factory-entry name="NewPersistenceUnit" value="baaea965-f990-4068-8249-c5e073b45358" />
-          <factory-entry name="NewPersistenceUnitTest" value="4ab150ad-d652-452e-9a36-8dfda30d2b70" />
+          <factory-entry name="NewPersistenceUnitTest" value="dataSourceTest" />
         </datasource-mapping>
-        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/test/resources/META-INF/persistenceTest.xml" />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/java/com/qsoft/bankaccount/persistence/model/BankAccountEntity.java" />
       </configuration>
     </facet>
   </component>
