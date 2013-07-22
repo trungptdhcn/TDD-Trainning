@@ -1,7 +1,7 @@
 package com.qsoft.bankaccount.dao;
 
-import com.qsoft.bankaccount.persistence.dao.BankAccountDAO;
-import com.qsoft.bankaccount.persistence.model.BankAccountEntity;
+import com.qsoft.bankaccount.persistence.dao.TransactionDAO;
+import com.qsoft.bankaccount.persistence.model.TransactionEntity;
 import junit.framework.Assert;
 import org.dbunit.DataSourceDatabaseTester;
 import org.dbunit.IDatabaseTester;
@@ -19,21 +19,22 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Trung
- * Date: 21/07/2013
- * Time: 22:54
- * To change this template use File | Settings | File Templates.
+ * User: trungpt
+ * Date: 7/22/13
+ * Time: 1:35 PM
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:testContext.xml"})
 @TransactionConfiguration(defaultRollback = true)
 @Transactional
-public class TestBankAccountDAO {
+public class TestTransactionDAO
+{
     @Autowired
-    private BankAccountDAO bankAccountDAO;
+    private TransactionDAO transactionDAO;
 
     @Autowired
     private DataSource dataSourceTest;
@@ -63,34 +64,11 @@ public class TestBankAccountDAO {
         databaseTester.onTearDown();
     }
     @Test
-    public void testGetAccount()
+    public void testGetTransaction()
     {
-        BankAccountEntity bankaccount = bankAccountDAO.find("0123456789");
-        Assert.assertEquals(100.0,bankaccount.getBalance());
-        Assert.assertEquals((Object) 1,bankaccount.getId());
-    }
-    @Test
-    public void testGetAccountNotExistsDatabase()
-    {
-        BankAccountEntity bankAccountEntity = bankAccountDAO.find("0000");
-        Assert.assertEquals(null,bankAccountEntity);
-    }
-    @Test
-    public void testSaveAccountNotExistInDatabase()
-    {
-        BankAccountEntity bankAccountEntity = new BankAccountEntity("111111");
-        bankAccountDAO.save(bankAccountEntity);
-        BankAccountEntity entitytest = bankAccountDAO.find("111111");
-        Assert.assertEquals(entitytest.getBalance(),bankAccountEntity.getBalance());
-    }
-    @Test
-    public void testSaveAccountAccountExistDatabase()
-    {
-        BankAccountEntity bankAccountEntity = bankAccountDAO.find("0123456789");
-        bankAccountEntity.setBalance(bankAccountEntity.getBalance()+100.0);
-        bankAccountDAO.save(bankAccountEntity);
-        BankAccountEntity bankAccountEntityTest = bankAccountDAO.find("0123456789");
-        Assert.assertEquals(bankAccountEntityTest.getBalance(),200.0);
+        List<TransactionEntity> transactionEntityList = new ArrayList<TransactionEntity>();
+        transactionEntityList = transactionDAO.getTransaction("0123456789");
+        Assert.assertEquals(2,transactionEntityList.size());
     }
 
 }

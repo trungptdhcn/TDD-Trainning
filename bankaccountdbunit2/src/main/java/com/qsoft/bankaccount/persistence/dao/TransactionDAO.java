@@ -1,5 +1,9 @@
 package com.qsoft.bankaccount.persistence.dao;
 
+import com.qsoft.bankaccount.persistence.model.TransactionEntity;
+
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Trung
@@ -8,4 +12,5 @@ package com.qsoft.bankaccount.persistence.dao;
  * To change this template use File | Settings | File Templates.
  */
 public interface TransactionDAO {
+    List<TransactionEntity> getTransaction(String accountNumber);
 }

@@ -12,6 +12,7 @@
        <!--default-autowire="byName">-->
     <context:annotation-config />
     <bean id="bankAccountDAO" class="com.qsoft.bankaccount.persistence.dao.impl.BankAccountDAOImpl"/>
+    <bean id="transactionDAO" class="com.qsoft.bankaccount.persistence.dao.impl.TransactionDAOImpl"/>
     <bean id="placeholderConfig"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="classpath:dbTest.properties"/>
